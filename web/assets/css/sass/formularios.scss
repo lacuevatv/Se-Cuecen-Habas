@@ -1,0 +1,355 @@
+/*
+ * FORMULARIO
+*/
+
+
+
+form {
+    position: relative;
+    @media (min-width: $md) {
+        display: flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        justify-content: space-between;
+    }
+
+
+    legend {
+        margin: 2em 0!important;
+        width: 70%;
+    }
+
+    .title-form {
+        width: 100%;
+        display: flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        flex-direction: column;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        justify-content: space-between;
+        @media (min-width: $md) {
+            font-size: 120%;
+        }
+    }
+    .inner-wrapper-form {
+        width: 100%;
+    }
+
+
+    .margin-left {
+        @media (min-width: $md) {
+            margin-left: .5em;
+        }
+    }
+    
+    .margin-right {
+        @media (min-width: $md) {
+            margin-right: .5em;
+        }
+    }
+
+    .loader {
+        display: none;
+        background: rgba(0,0,0,0.2) url(../images/loader-espiral.gif) no-repeat center;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-size: 20%;
+        z-index: 111;
+    }
+    .msj-form {
+        position: absolute;
+        bottom: -30px;
+        right: 10px;
+        color: red;
+        font-size: 110%;
+        text-transform: lowercase;
+        @media (min-width: $sm) {
+            bottom: -50px;
+            font-size: 100%;
+        }
+        @media (min-width: $md) {
+            bottom: -30px;
+            right: auto;
+            left: 50%;
+            @include transform(translateX(-50%));
+        }
+    }
+    
+}//form
+
+.form-group {
+    position: relative;
+    height: 40px;
+    margin-bottom: .5em;
+    border: 1px solid $color-gris-medio;
+    @media (min-width: $xs) {
+        height: 50px;
+    }
+    @media (min-width: $sm) {
+        height: 70px;
+    }
+    @media (min-width: $md) {
+        height: 40px;
+    }
+    @media (min-width: $xlg) {
+        height: 40px;
+    }
+
+    label {
+        position: absolute;
+        top: 10px;
+        left: 7px;
+        z-index:2;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: $color-gris-texto;
+        @include transition(all $transitionSpeedx2);
+        @media (min-width: $md) {
+            top: 8px;
+        }
+        @media (min-width: $xlg) {
+            //top: 0;
+        }
+    }
+
+    label.long-label {
+        font-size: 80%;
+        @media (min-width: $md) {
+            font-size: 100%;
+        }
+    }
+
+    label.label-col-right {
+        @media (min-width: $md) {
+            left: 5px;
+        }
+    }
+
+    //cuando el input está en focus o tiene contentenido la etiqueta se achica
+    label.on {
+        font-size: 60%;
+        top: -2px;
+        z-index:0;
+        @include transition(all $transitionSpeedx2);
+    }
+    input {
+        z-index:1;
+        height: 25px;
+        position: absolute;
+        bottom: 0;
+        left: 7px;
+        width: 90%;
+        border: 0;
+        background: transparent;
+        font-size: 100%;
+        @media (min-width: $xs) {
+            height: 30px;
+        }
+        @media (min-width: $sm) {
+            height: 30px;
+            bottom: 2px;
+        }
+        @media (min-width: $md) {
+            height: 30px;
+            bottom: 0px;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+
+    //input con contenido escrito
+    .input-on {
+        color: $color-gris-medio!important;
+    }
+
+    input[type=number] {
+        -moz-appearance:textfield;
+        &::-webkit-inner-spin-button, &::-webkit-outer-spin-button { 
+            appearance: none; 
+            -webkit-appearance: none; 
+            margin: 0; 
+
+        }
+    }
+
+    input[type=date] {
+        -moz-appearance:textfield;
+        color: transparent;
+        &::-webkit-inner-spin-button, &::-webkit-outer-spin-button { 
+            appearance: none; 
+            -webkit-appearance: none; 
+          margin: 0; 
+        }
+
+        &::-webkit-calendar-picker-indicator {
+            display:none;
+        }
+
+        &::-webkit-datetime-edit-month-field {
+            color: inherit
+        }
+        &::-webkit-datetime-edit-day-field {
+            color: inherit
+        }
+        &::-webkit-datetime-edit-year-field {
+            color: inherit;
+        }
+    }
+
+    .msj-error-input {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        font-size: 60%;
+        color: $color-rojo-opaco;
+        width: 55%;
+        text-transform: lowercase;
+        line-height: 110%;
+        display:none;
+    }
+
+    .msj-error-input-background {
+        top: -13px;
+        padding: 3px;
+        background-color: rgba(255,255,255,0.5);
+    }
+    .msj-error-input-col {
+        right: 45px;
+    }
+
+}//.form-group 
+
+
+
+.btn-submit {
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    display: inline-block;
+    font-weight: 500;
+    background-color: $color-rojo-brillante;
+    color: $color-blanco;
+    padding: .5em 1em;
+    height: 30px;
+    text-transform: uppercase;
+    line-height: 110%;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    @include transition(all $transitionSpeed ease);
+    
+    @media (min-width: $xs) {
+        height: 50px;
+    }
+    @media (min-width: $sm) {
+        height: 70px;
+    }
+    @media (min-width: $md) {
+        height: 40px;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 70px;
+        top: 0;
+        width: 27px;
+        height: 30px;
+        background: url(../images/sprite.png) no-repeat;
+        background-position:-125px -182px;
+        @include transition(all $transitionSpeed ease);
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+            background: url(../images/sprite2x.png) no-repeat;
+            background-size: 324px 305px;
+            background-position:-125px -182px;
+        }
+        @media (min-width: $xs) {
+            height: 30px;
+            width: 37px;
+            background-position:-150px -182px;
+            left: 90px;
+            top: 12px
+        }
+        @media (min-width: $sm) {
+            left: 140px;
+            top: 22px
+        }
+        @media (min-width: $md) {
+            height: 30px;
+            width: 24px;
+            background-position: -125px -182px;
+            left: 76px;
+            top: 6px;
+        }
+    }//after
+
+    &:hover {
+        background-color: $color-celeste;
+        color: $color-negro;
+        @include transition(all $transitionSpeed ease-out);
+        zoom: 1;
+        filter: alpha(opacity=90);
+        opacity: 0.9;
+        @media (min-width: $md) {
+            &:after {
+                left: 80px;
+                background-position: -101px -182px;
+            }
+        }
+
+    }//hover
+}
+
+#reunion-form {
+    .subtitulo-seccion {
+        @media (min-width: $md) {
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: -.5em;
+                left: .05em;
+                width: 20px;
+                height: 1px;
+                background-color: $color-negro;
+            }
+        }
+    }
+
+    @media (min-width: $md) {
+        font-size: 75%;
+
+        h2 {
+            margin-top: 0;
+            font-size: 200%;
+        }
+
+        .subtitulo-seccion {
+            margin-top: 0!important;
+            margin-bottom: .8em!important;
+            font-size: 140%;
+            width: 10em;   
+        }
+    }
+    
+}//#reunion-form

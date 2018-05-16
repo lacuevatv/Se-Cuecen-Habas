@@ -1,0 +1,374 @@
+//Baskerville
+@font-face {
+    font-family: 'New Baskerville Std Roman';
+    src: url('../fonts/baskerville/baskervillestd-roman.eot');
+    src: url('../fonts/baskerville/baskervillestd-roman.woff') format('woff'),
+        url('../fonts/baskerville/baskervillestd-roman.otf') format('opentype'),
+        url('../fonts/baskerville/baskervillestd-roman.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'New Baskerville Std Roman';
+    src: url('../fonts/baskerville/baskervillestd-italic.eot');
+    src: url('../fonts/baskerville/baskervillestd-italic.woff') format('woff'),
+        url('../fonts/baskerville/baskervillestd-italic.otf') format('opentype'),
+        url('../fonts/baskerville/baskervillestd-italic.svg') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'New Baskerville Std Roman';
+    src: url('../fonts/baskerville/baskervillestd-smbd.eot');
+    src: url('../fonts/baskerville/baskervillestd-smbd.woff') format('woff'),
+        url('../fonts/baskerville/baskervillestd-smbd.otf') format('opentype'),
+        url('../fonts/baskerville/baskervillestd-smbd.svg') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'New Baskerville Std Roman';
+    src: url('../fonts/baskerville/baskervillestd-smbdita.eot');
+    src: url('../fonts/baskerville/baskervillestd-smbdita.woff') format('woff'),
+        url('../fonts/baskerville/baskervillestd-smbdita.otf') format('opentype'),
+        url('../fonts/baskerville/baskervillestd-smbdita.svg') format('svg');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'New Baskerville Std Roman';
+    src: url('../fonts/baskerville/baskervillestd-bold.eot');
+    src: url('../fonts/baskerville/baskervillestd-bold.woff') format('woff'),
+        url('../fonts/baskerville/baskervillestd-bold.otf') format('opentype'),
+        url('../fonts/baskerville/baskervillestd-bold.svg') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'New Baskerville Std Roman';
+    src: url('../fonts/baskerville/baskervillestd-boldit.eot');
+    src: url('../fonts/baskerville/baskervillestd-boldit.woff') format('woff'),
+        url('../fonts/baskerville/baskervillestd-boldit.otf') format('opentype'),
+        url('../fonts/baskerville/baskervillestd-boldit.svg') format('svg');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/*fuente q no se usa
+@font-face {
+    font-family: 'New Baskerville Std Roman';
+    src: url('../fonts/baskerville/baskervillestd-black.eot');
+    src: url('../fonts/baskerville/baskervillestd-black.woff') format('woff'),
+        url('../fonts/baskerville/baskervillestd-black.otf') format('opentype'),
+        url('../fonts/baskerville/baskervillestd-black.svg') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+*/
+
+//Flama Basic
+@font-face {
+    font-family: 'Flama Basic';
+    src: url('../fonts/flama/flama-basic.eot');
+    src: url('../fonts/flama/flama-basic.woff') format('woff'),
+        url('../fonts/flama/flama-basic.otf') format('opentype'),
+        url('../fonts/flama/flama-basic.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*fuente q no se usa
+@font-face {
+    font-family: 'Flama Basic';
+    src: url('../fonts/flama/flama-basicitalic.eot');
+    src: url('../fonts/flama/flama-basicitalic.woff') format('woff'),
+        url('../fonts/flama/flama-basicitalic.otf') format('opentype'),
+        url('../fonts/flama/flama-basicitalic.svg') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+*/
+
+//Flama Book
+@font-face {
+    font-family: 'Flama Book';
+    src: url('../fonts/flama/flama-book.eot');
+    src: url('../fonts/flama/flama-book.woff') format('woff'),
+        url('../fonts/flama/flama-book.otf') format('opentype'),
+        url('../fonts/flama/flama-book.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*fuente que no se usa
+@font-face {
+    font-family: 'Flama Book';
+    src: url('../fonts/flama/flama-bookitalic.eot');
+    src: url('../fonts/flama/flama-bookitalic.woff') format('woff'),
+        url('../fonts/flama/flama-bookitalic.otf') format('opentype'),
+        url('../fonts/flama/flama-bookitalic.svg') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+*/
+
+//Flama
+@font-face {
+    font-family: 'Flama';
+    src: url('../fonts/flama/flama.eot');
+    src: url('../fonts/flama/flama.woff') format('woff'),
+        url('../fonts/flama/flama.otf') format('opentype'),
+        url('../fonts/flama/flama.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*fuente que no se usa
+@font-face {
+    font-family: 'Flama';
+    src: url('../fonts/flama/flama-italic.eot');
+    src: url('../fonts/flama/flama-italic.woff') format('woff'),
+        url('../fonts/flama/flama-italic.otf') format('opentype'),
+        url('../fonts/flama/flama-italic.svg') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Flama';
+    src: url('../fonts/flama/flama-thin.eot');
+    src: url('../fonts/flama/flama-thin.woff') format('woff'),
+        url('../fonts/flama/flama-thin.otf') format('opentype'),
+        url('../fonts/flama/flama-thin.svg') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Flama';
+    src: url('../fonts/flama/flama-thinitalic.eot');
+    src: url('../fonts/flama/flama-thinitalic.woff') format('woff'),
+        url('../fonts/flama/flama-thinitalic.otf') format('opentype'),
+        url('../fonts/flama/flama-thinitalic.svg') format('svg');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Flama';
+    src: url('../fonts/flama/flama-ultralight.eot');
+    src: url('../fonts/flama/flama-ultralight.woff') format('woff'),
+        url('../fonts/flama/flama-ultralight.otf') format('opentype'),
+        url('../fonts/flama/flama-ultralight.svg') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Flama';
+    src: url('../fonts/flama/flama-ultralightitalic.eot');
+    src: url('../fonts/flama/flama-ultralightitalic.woff') format('woff'),
+        url('../fonts/flama/flama-ultralightitalic.otf') format('opentype'),
+        url('../fonts/flama/flama-ultralightitalic.svg') format('svg');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Flama';
+    src: url('../fonts/flama/flama-light.eot');
+    src: url('../fonts/flama/flama-light.woff') format('woff'),
+        url('../fonts/flama/flama-light.otf') format('opentype'),
+        url('../fonts/flama/flama-light.svg') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Flama';
+    src: url('../fonts/flama/flama-lightitalic.eot');
+    src: url('../fonts/flama/flama-lightitalic.woff') format('woff'),
+        url('../fonts/flama/flama-lightitalic.otf') format('opentype'),
+        url('../fonts/flama/flama-lightitalic.svg') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Flama';
+    src: url('../fonts/flama/flama-medium.eot');
+    src: url('../fonts/flama/flama-medium.woff') format('woff'),
+        url('../fonts/flama/flama-medium.otf') format('opentype'),
+        url('../fonts/flama/flama-medium.svg') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Flama';
+    src: url('../fonts/flama/flama-mediumitalic.eot');
+    src: url('../fonts/flama/flama-mediumitalic.woff') format('woff'),
+        url('../fonts/flama/flama-mediumitalic.otf') format('opentype'),
+        url('../fonts/flama/flama-mediumitalic.svg') format('svg');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Flama';
+    src: url('../fonts/flama/flama-bold.eot');
+    src: url('../fonts/flama/flama-bold.woff') format('woff'),
+        url('../fonts/flama/flama-bold.otf') format('opentype'),
+        url('../fonts/flama/flama-bold.svg') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Flama';
+    src: url('../fonts/flama/flama-bolditalic.eot');
+    src: url('../fonts/flama/flama-bolditalic.woff') format('woff'),
+        url('../fonts/flama/flama-bolditalic.otf') format('opentype'),
+        url('../fonts/flama/flama-bolditalic.svg') format('svg');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Flama';
+    src: url('../fonts/flama/flama-extrabold.eot');
+    src: url('../fonts/flama/flama-extrabold.woff') format('woff'),
+        url('../fonts/flama/flama-extrabold.otf') format('opentype'),
+        url('../fonts/flama/flama-extrabold.svg') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Flama';
+    src: url('../fonts/flama/flama-extrabolditalic.eot');
+    src: url('../fonts/flama/flama-extrabolditalic.woff') format('woff'),
+        url('../fonts/flama/flama-extrabolditalic.otf') format('opentype'),
+        url('../fonts/flama/flama-extrabolditalic.svg') format('svg');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Flama';
+    src: url('../fonts/flama/flama-black.eot');
+    src: url('../fonts/flama/flama-black.woff') format('woff'),
+        url('../fonts/flama/flama-black.otf') format('opentype'),
+        url('../fonts/flama/flama-black.svg') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Flama';
+    src: url('../fonts/flama/flama-blackitalic.eot');
+    src: url('../fonts/flama/flama-blackitalic.woff') format('woff'),
+        url('../fonts/flama/flama-blackitalic.otf') format('opentype'),
+        url('../fonts/flama/flama-blackitalic.svg') format('svg');
+    font-weight: 900;
+    font-style: italic;
+}
+*/
+
+
+//DIN Next LT Pro
+/*fuente que no se usa
+@font-face {
+    font-family: 'DIN Next LT Pro';
+    src: url('../fonts/din-next-lt-pro/dinnextltpro-regular.eot');
+    src: url('../fonts/din-next-lt-pro/dinnextltpro-regular.woff') format('woff'),
+        url('../fonts/din-next-lt-pro/dinnextltpro-regular.otf') format('opentype'),
+        url('../fonts/din-next-lt-pro/dinnextltpro-regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN Next LT Pro';
+    src: url('../fonts/din-next-lt-pro/dinnextltpro-italic.eot');
+    src: url('../fonts/din-next-lt-pro/dinnextltpro-italic.woff') format('woff'),
+        url('../fonts/din-next-lt-pro/dinnextltpro-italic.otf') format('opentype'),
+        url('../fonts/din-next-lt-pro/dinnextltpro-italic.svg') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DIN Next LT Pro';
+    src: url('../fonts/din-next-lt-pro/dinnextltpro-condensed.eot');
+    src: url('../fonts/din-next-lt-pro/dinnextltpro-condensed.woff') format('woff'),
+        url('../fonts/din-next-lt-pro/dinnextltpro-condensed.otf') format('opentype'),
+        url('../fonts/din-next-lt-pro/dinnextltpro-condensed.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: condensed;
+}
+
+@font-face {
+    font-family: 'DIN Next LT Pro';
+    src: url('../fonts/din-next-lt-pro/dinnextltpro-medium.eot');
+    src: url('../fonts/din-next-lt-pro/dinnextltpro-medium.woff') format('woff'),
+        url('../fonts/din-next-lt-pro/dinnextltpro-medium.otf') format('opentype'),
+        url('../fonts/din-next-lt-pro/dinnextltpro-medium.svg') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN Next LT Pro';
+    src: url('../fonts/din-next-lt-pro/dinnextltpro-mediumitalic.eot');
+    src: url('../fonts/din-next-lt-pro/dinnextltpro-mediumitalic.woff') format('woff'),
+        url('../fonts/din-next-lt-pro/dinnextltpro-mediumitalic.otf') format('opentype'),
+        url('../fonts/din-next-lt-pro/dinnextltpro-mediumitalic.svg') format('svg');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DIN Next LT Pro';
+    src: url('../fonts/din-next-lt-pro/dinnextltpro-mediumcond.eot');
+    src: url('../fonts/din-next-lt-pro/dinnextltpro-mediumcond.woff') format('woff'),
+        url('../fonts/din-next-lt-pro/dinnextltpro-mediumcond.otf') format('opentype'),
+        url('../fonts/din-next-lt-pro/dinnextltpro-mediumcond.svg') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: condensed;
+}
+
+@font-face {
+    font-family: 'DIN Next LT Pro';
+    src: url('../fonts/din-next-lt-pro/dinnextltpro-bold.eot');
+    src: url('../fonts/din-next-lt-pro/dinnextltpro-bold.woff') format('woff'),
+        url('../fonts/din-next-lt-pro/dinnextltpro-bold.otf') format('opentype'),
+        url('../fonts/din-next-lt-pro/dinnextltpro-bold.svg') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN Next LT Pro';
+    src: url('../fonts/din-next-lt-pro/dinnextltpro-bolditalic.eot');
+    src: url('../fonts/din-next-lt-pro/dinnextltpro-bolditalic.woff') format('woff'),
+        url('../fonts/din-next-lt-pro/dinnextltpro-bolditalic.otf') format('opentype'),
+        url('../fonts/din-next-lt-pro/dinnextltpro-bolditalic.svg') format('svg');
+    font-weight: 700;
+    font-style: italic;
+}
+*/
+@font-face {
+    font-family: 'DIN Next LT Pro';
+    src: url('../fonts/din-next-lt-pro/dinnextltpro-boldcondensed.eot');
+    src: url('../fonts/din-next-lt-pro/dinnextltpro-boldcondensed.woff') format('woff'),
+        url('../fonts/din-next-lt-pro/dinnextltpro-boldcondensed.otf') format('opentype'),
+        url('../fonts/din-next-lt-pro/dinnextltpro-boldcondensed.svg') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: condensed;
+}

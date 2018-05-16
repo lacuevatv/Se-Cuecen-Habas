@@ -1,0 +1,107 @@
+.main-footer {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+//hit legales
+.hit-legales{
+    font-family: $fuente-secundaria;
+    color:$color-blanco;
+    background-color: #333;
+    text-align: center;
+    font-size: 100%;
+    padding: 5px 0;
+    @media (min-width: $md) {
+        padding: 15px 0 10px;
+    }
+    
+    a {
+        position: relative;
+        img {
+            vertical-align: bottom;
+                width: 25px;
+            @media (min-width: $md) {
+                width: 20px;        
+            }
+        }
+        
+        &:hover {
+            &:before {
+                @media (min-width: $md) {
+                    content: "Design and development";
+                    position: absolute;
+                    text-transform: uppercase;
+                    display: inline-block;
+                    line-height: 170%;
+                    right: 21px;
+                    top: -2px;
+                    width: 170px;
+                    font-size: 70%;
+                }
+            }
+        &:after {
+                @media (min-width: $md) {
+                    content: "";
+                    display: inline-block;
+                    position: absolute;
+                    font-size: 100%;
+                    background: url(../images/logo-hit-fuente.png) no-repeat;
+                    background-size: cover;
+                    top: 1px;
+                    left: 35px;
+                    width: 25px;
+                    height: 14px;
+                }
+            }
+        }//cierra hover
+        
+        &:before {
+            content: "Design and development";
+            position: absolute;
+            text-transform: uppercase;
+            display: inline-block;
+            right: 25px;
+            top: -2px;
+            width: 126px;
+            font-size: 50%;
+            line-height: 150%;
+            opacity: 0.8;
+            
+            @media (min-width: $sm) {
+                right: 34px;
+                top: 5px;
+                opacity: 0.9;
+                font-size: 50%;
+                width: 166px;
+                
+            }
+            @media (min-width: $md) {
+                content: none;
+            }
+        }       
+        &:after {
+            display: inline-block;
+            position: absolute;
+            content: "";
+            top: -3px;
+            left: 38px;
+            width: 30px;
+            height: 15px;
+            background: url(../images/logo-hit-fuente.png) no-repeat;
+            background-size: cover;
+            opacity: 0.8;
+            @media (min-width: $sm) {
+                top: 6px;
+                left: 42px;
+                width: 32px;
+                height: 17px;
+            }
+            @media (min-width: $md) {
+                content: none;
+            }
+        }
+        
+    }//cierra a
+}//cierre hit-legales

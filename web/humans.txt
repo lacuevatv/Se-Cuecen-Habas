@@ -1,0 +1,17 @@
+/* TEAM */
+	Developer: coco
+	In: https://www.linkedin.com/in/cocodelacueva/
+	From: Ciudad de Buenos Aires, Argentina
+
+/* THANKS */
+
+	(First) Alejandro Fernandez - Agencia Hit
+	url: http://hit.com.ar/
+	From: Ciudad de Buenos Aires, Argentina
+		
+
+/* SITE */
+	Last update:2018/06/14
+	Language: Español
+	Doctype:HTML5
+	IDE: Sublime Text, FileZilla, Photoshop
