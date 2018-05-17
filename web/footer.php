@@ -11,9 +11,76 @@ global $dispositivo;
 
 <!--- footer -->
     <footer class="main-footer">
-    
-	    footer
-      
+    <!--- footer-contacto -->
+	    <div class="footer-contacto-wrapper">
+            <address class="container">
+                <ul class="footer-contacto">
+                    <li class="address-item">
+                        <h3>
+                            Planta de elaboración
+                        </h3>
+                        <p>
+                            Pio Collivadino 2995/2297 | Ituzaingo Bs.As. | Argentina
+                        </p>
+                    </li>
+                    <li class="address-item">
+                        <h3>
+                            Oficinas Comerciales
+                        </h3>
+                        <p>
+                            Moreno 1702 6to Izquierda | C1093ABH Bs.As. | Argentina
+                        </p>
+                    </li>
+                    <li class="address-item">
+                        <h3>
+                            Teléfono
+                        </h3>
+                        <p>
+                            <?php echo TELEFONO; ?>
+                        </p>
+                    </li>
+                    <li class="address-item">
+                        <h3>
+                            Email
+                        </h3>
+                        <p>
+                            <?php echo LINK_EMAIL; ?>
+                        </p>
+                    </li>
+                </ul>
+            </address>
+        </div><!--- //footer-contacto -->
+    <!--- footer-redes -->
+        <div class="footer-redes-wrapper">
+            <a href="#" target="_blank" class="btn-work-us">
+                Trabaja con nosotros
+            </a>
+            <ul class="footer-redes">
+                <li>
+                    <a href="<?php echo LINK_FACEBOOK; ?>" target="_blank">
+                        Facebook
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo LINK_TWITTER; ?>" target="_blank">
+                        Twitter
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo LINK_GOOGLE; ?>" target="_blank">
+                        Google
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo LINK_INSTAGRAM; ?>" target="_blank">
+                        Instagram
+                    </a>
+                </li>
+            </ul>
+            <a href="#" target="_blank" class="btn-work-us">
+                Suscribirse al Newsletter
+            </a>
+        </div><!--- //footer-redes -->
 
         <!-- ASIDE LEGALES HIT -->
     	<?php getTemplate( 'hit' ); ?>

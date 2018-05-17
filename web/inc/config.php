@@ -28,13 +28,15 @@ define('SCREENSHOT', MAINSURL . '/assets/images/popupdefault.jpg' );
 
 define('INSTAGRAM', '');//nombre usuario
 //LINKS:
-define( 'EMAILFORMULARIO', '' );
-define( 'LINK_EMAIL', '' );
+define( 'TELEFONO', '(011) 5245.8093' );
+define( 'EMAILFORMULARIO', 'info@secuecenhabas.com.ar' );
+define( 'LINK_EMAIL', 'info@secuecenhabas.com.ar' );
 define( 'WHATSAPPTEXT', '');
 define( 'WHATSAPP', '');
 define('LINK_FACEBOOK', '');
 define('LINK_INSTAGRAM', 'https://www.instagram.com/' . INSTAGRAM);
 define('LINK_TWITTER', '');
+define('LINK_GOOGLE', '');
 define('LINK_VIMEO', '');
 define('LINK_YOUTUBE', '');
 define('LINK_SPOTIFY', '');

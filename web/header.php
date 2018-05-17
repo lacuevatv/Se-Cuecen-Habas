@@ -59,7 +59,7 @@ global $dispositivo;
     ?>
     <header class="main-header">
         
-        header
+        <img src="<?php echo UPLOADSURL; ?>/ref-header-nav.jpg" style="display:block;width:100%;margin:0 auto;">
 
     </header> <!-- //.main-header -->
 
