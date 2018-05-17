@@ -11,8 +11,8 @@ global $dispositivo;
 
 <!--- footer -->
     <footer class="main-footer">
-    <!--- footer-contacto -->
-	    <div class="footer-contacto-wrapper">
+    <!--- footer-address -->
+	    <div class="footer-address-wrapper">
             <address class="container">
                 <ul class="footer-contacto">
                     <li class="address-item">
@@ -49,12 +49,9 @@ global $dispositivo;
                     </li>
                 </ul>
             </address>
-        </div><!--- //footer-contacto -->
+        </div><!--- //footer-address -->
     <!--- footer-redes -->
         <div class="footer-redes-wrapper">
-            <a href="#" target="_blank" class="btn-work-us">
-                Trabaja con nosotros
-            </a>
             <ul class="footer-redes">
                 <li>
                     <a href="<?php echo LINK_FACEBOOK; ?>" target="_blank">
@@ -78,6 +75,9 @@ global $dispositivo;
                 </li>
             </ul>
             <a href="#" target="_blank" class="btn-work-us">
+                Trabajá con nosotros
+            </a>
+            <a href="#" target="_blank" class="btn-suscribe">
                 Suscribirse al Newsletter
             </a>
         </div><!--- //footer-redes -->

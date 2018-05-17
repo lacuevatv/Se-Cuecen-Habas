@@ -3,7 +3,141 @@
     z-index: 1;
 }
 
+//footer address
+.footer-address-wrapper {
+    position: relative;
+    background-color: $color-negro;
+    color: $color-blanco;
+    
+    .footer-contacto {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1100px;
+        padding: 50px 3%;
+        font-size: 120%;
+        line-height: 120%;
+        @media (min-width: $md) {
+            font-size: 100%;
+            line-height: 100%;
+            display: flex;
+            display: -o-flex;
+            display: -ms-flex;
+            display: -moz-flex;
+            display: -webkit-flex;
+            -webkit-justify-content: space-around;
+            -moz-justify-content: space-around;
+            -ms-justify-content: space-around;
+            -o-justify-content: space-around;
+            justify-content: space-around;
+        }
 
+        li {
+            min-width: 20%;
+            padding: 0 2%;
+            margin-top: 30px;
+            @media (min-width: $md) {
+                margin-top: 0;
+                border-right: 1px solid #fff;
+            }
+
+            &:last-child {
+                border-right: none;
+            }
+
+            h3 {
+                font-family: $fuente-secundaria;
+                text-transform: uppercase;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-style: italic;
+            }
+        }
+    }
+}
+
+//footer redes
+.footer-redes-wrapper {
+    position: relative;
+    font-family: $fuente-secundaria;
+    background-color: $color-blanco;
+    color: $color-negro;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px 0;
+    @media (min-width: $md) {
+        font-size: 80%;
+        padding: 0;
+    }
+
+    .footer-redes {
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+        padding: 20px 0;
+        display: flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        align-items: center;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        flex-direction: column;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        justify-content: center;
+        @media (min-width: $md) {
+            -webkit-flex-direction: row;
+            -moz-flex-direction: row;
+            -ms-flex-direction: row;
+            -o-flex-direction: row;
+            flex-direction: row;
+            -webkit-justify-content: space-around;
+            -moz-justify-content: space-around;
+            -ms-justify-content: space-around;
+            -o-justify-content: space-around;
+            justify-content: space-around;
+        }
+    }
+
+    .btn-work-us {
+        border: 1px $color-negro solid;
+        padding: 4px 10px;
+        display: inline-block;
+        margin: 10px auto;
+        @media (min-width: $md) {
+            margin: 0;
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            font-size: 80%;
+        }
+    }
+
+    .btn-suscribe {
+        border: 1px $color-negro solid;
+        padding: 4px 10px;
+        display: inline-block;
+        margin: 10px auto;
+        @media (min-width: $md) {
+            margin: 0;
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            font-size: 80%;
+        }
+    }
+}
 
 //hit legales
 .hit-legales{

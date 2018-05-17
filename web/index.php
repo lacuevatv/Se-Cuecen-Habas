@@ -22,7 +22,7 @@ include 'header.php'; ?>
     <div class="inner-wrapper">
 
     <!--- .section-intro -->
-        <section>
+        <section id="intro">
             <div class="container">
                 <hgroup>
                     <h2>
@@ -40,7 +40,7 @@ include 'header.php'; ?>
         </section><!--- //.section-intro -->
 
         <!--- section-servicios -->
-        <section>
+        <section id="servicios">
             <div class="container">
                 <hgroup>
                     <h2>
@@ -88,7 +88,7 @@ include 'header.php'; ?>
         <!--- //.section-servicios -->
 
         <!--- section-elegirnos -->
-        <section>
+        <section id="elegirnos">
             <div class="container">
                 <hgroup>
                     <h2>
@@ -150,7 +150,7 @@ include 'header.php'; ?>
         <!--- //.section-elegirnos -->
 
         <!--- section-salones -->
-        <section>
+        <section id="salones">
             <div class="container">
                 <hgroup>
                     <h2>
@@ -168,7 +168,7 @@ include 'header.php'; ?>
         <!--- //.section-salones -->
 
         <!--- section-clientes -->
-        <section>
+        <section id="clientes">
             <div class="container">
                 <hgroup>
                     <h2>
@@ -187,7 +187,7 @@ include 'header.php'; ?>
         <!--- //.section-clientes -->
 
         <!--- section-comentarios -->
-        <section>
+        <section id="experiencias ">
             <img src="<?php echo UPLOADSURL; ?>/ref-comentarios.jpg" style="display:block;width:100%;margin:0 auto;">
             <!--<div class="container">
                 <hgroup>
@@ -205,7 +205,7 @@ include 'header.php'; ?>
         <!--- //.section-comentarios -->
 
         <!--- section-contacto -->
-        <section>
+        <section id="contacto">
             <div class="container">
                 <hgroup>
                     <h2>
