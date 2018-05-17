@@ -2,3 +2,91 @@
     position: relative;
     z-index: 0;
 }
+
+.section-wrapper {
+    padding: 40px 0;
+}
+
+//este le da un pading extra a los costados, SOLO en los moviles
+.padding-interno {
+    padding: 0 5%;
+    @media (min-width: $xs) {
+        padding: 0 10%;
+    }
+    @media (min-width: $md) {
+        padding: 0;
+    }
+}//.padding-interno
+
+.sub-padding-interno {
+    padding: 0 10%;
+    @media (min-width: $md) {
+        padding: 0;
+        width: 100%;
+        max-width: 778px;
+        display: block;
+        margin: 0 auto;
+    }
+}//.sub-padding-interno
+
+
+/*
+ * SECTION INTRO
+*/
+
+#intro {
+    text-align: center;
+    .firma {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 360px;
+    }
+}//#intro
+
+
+/*
+ * SERVICIOS
+*/
+#servicios {
+    .lista-servicios {
+        @media (min-width: $md) {
+            display: flex;
+            display: -o-flex;
+            display: -ms-flex;
+            display: -moz-flex;
+            display: -webkit-flex;
+            -webkit-justify-content: space-between;
+            -moz-justify-content: space-between;
+            -ms-justify-content: space-between;
+            -o-justify-content: space-between;
+            justify-content: space-between;
+        }
+
+        li {} 
+    }//.lista-servicios
+}//#servicios
+
+/*
+ * POR QUE ELEGIRNOS
+*/
+#elegirnos {
+    .lista-por-que {
+
+    }//.lista-por-que
+
+    .lista-expertise {
+        @media (min-width: $md) {
+            display: flex;
+            display: -o-flex;
+            display: -ms-flex;
+            display: -moz-flex;
+            display: -webkit-flex;
+            -webkit-justify-content: space-between;
+            -moz-justify-content: space-between;
+            -ms-justify-content: space-between;
+            -o-justify-content: space-between;
+            justify-content: space-between;
+        }
+    }//.lista-expertise
+}//#elegirnos

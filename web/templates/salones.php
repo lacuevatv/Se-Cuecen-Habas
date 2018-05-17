@@ -1,0 +1,1 @@
+<img src="<?php echo UPLOADSURL; ?>/ref-fotos-salones.jpg" style="display:block;width:100%;margin:0 auto;">

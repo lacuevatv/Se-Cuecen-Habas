@@ -1,0 +1,18 @@
+.title-section {
+    font-family: $fuente-secundaria;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.subtitle-section {
+    text-align: center;
+    font-size: 200%;
+
+    em {
+        font-style: italic;
+    }
+}
+
+.text-center {
+    text-align: center;
+}

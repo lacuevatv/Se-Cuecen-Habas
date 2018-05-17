@@ -22,84 +22,70 @@ include 'header.php'; ?>
     <div class="inner-wrapper">
 
     <!--- .section-intro -->
-        <section id="intro">
-            <div class="container">
+        <section id="intro" class="section-wrapper">
+            <div class="container padding-interno">
                 <hgroup>
-                    <h2>
+                    <h2 class="title-section">
                         Welcome
                     </h2>
-                    <h3>
-                        Hot food and Cold Dring
+                    <h3 class="subtitle-section">
+                        Hot food <em>and</em> Cold Dring
                     </h3>
                 </hgroup>
-                <p>
-                    Hacemos cocina de diseño, sabrosa y abundante, para eventos sociales o corporativos. Una exquisita variedad de platos gourmet para un público amplio y exigente. Trabajamos fieles a nuestra cultura del buen comer, nos da satisfacción el servir y nos apasiona brindar verdaderas experiencias gastronómicas que van mucho más allá de solo llevarse algo rico a la boca.
-                </p>
-                <img src="<?php echo MAINSURL; ?>/assets/images/firma@2x.png" alt="Firma Richard">
+                <div class="sub-padding-interno">
+                    <p>
+                        Hacemos cocina de diseño, sabrosa y abundante, para eventos sociales o corporativos. Una exquisita variedad de platos gourmet para un público amplio y exigente. Trabajamos fieles a nuestra cultura del buen comer, nos da satisfacción el servir y nos apasiona brindar verdaderas experiencias gastronómicas que van mucho más allá de solo llevarse algo rico a la boca.
+                    </p>
+                    <img src="<?php echo MAINSURL; ?>/assets/images/firma@2x.png" alt="Firma Richard" class="firma">
+                </div>
             </div><!--- //.container -->
         </section><!--- //.section-intro -->
 
         <!--- section-servicios -->
-        <section id="servicios">
+        <section id="servicios" class="section-wrapper">
             <div class="container">
-                <hgroup>
-                    <h2>
+                <hgroup class="padding-interno">
+                    <h2 class="title-section">
                         Servicios
                     </h2>
-                    <h3>
-                        Criollo & Gourmet
+                    <h3 class="subtitle-section">
+                        Criollo <em>&</em> Gourmet
                     </h3>
                 </hgroup>
                 <!--- servicios:criollo y gourmet -->
-                <ul>
+                
+                <ul class="padding-interno lista-servicios">
+
                 <!--- servicio Item:criollo -->
                     <li>
-                        <article>
-                            <h1>
-                                Criollo
-                            </h1>
-                            <p>
-                                Nuestros asados están hechos por Expertos asadores muy lentamente al rescoldo del fogón. Disfruta de la Calidad de la Tradicional carne Argentina con nuestra selección de Novillitos Aberdeen Angus criados en los mejores campos de la Región Pampeana.
-                            </p>
-                            <button>
-                                Ver Menú
-                            </button>
-                        </article>
+                        <?php getTemplate( 'servicio', 'criollo' ); ?>    
                     </li><!--- //servicio Item:criollo -->
-                <!--- servicio Item:gourmet -->
+                
+                    <!--- servicio Item:gourmet -->
                     <li>
-                        <article>
-                            <h1>
-                                Gourmet
-                            </h1>
-                            <p>
-                                Disfruta de la más variada selección de Sabores Gourmet, con productos elegidos y obtenidos de los lugares donde mejor expresan su calidad. Cada Bocado o Plato es tratado por nuestros Expertos Chefs con el cuidado y experiencia que se merecen.
-                            </p>
-                            <button>
-                                Ver Menú
-                            </button>
-                        </article>
+                        <?php getTemplate( 'servicio', 'gourmet' ); ?>    
                     </li><!--- //servicio Item:gourmet -->
+                
                 </ul><!--- //servicios:criollo y gourmet -->
 
                 <button>Ver imágenes</button>
+
             </div><!--- //.container -->
-        </section>
-        <!--- //.section-servicios -->
+        </section><!--- //.section-servicios -->
 
         <!--- section-elegirnos -->
-        <section id="elegirnos">
+        <section id="elegirnos" class="section-wrapper">
             <div class="container">
-                <hgroup>
-                    <h2>
+                <hgroup class="padding-interno">
+                    <h2 class="title-section">
                         Por qué elegirnos
                     </h2>
-                    <h3>
-                        Buscamos Superarnos día a día
+                    <h3 class="subtitle-section">
+                        Buscamos <em>Superarnos</em> día a día
                     </h3>
                 </hgroup>
-
-                <ol>
+                
+                <ol class="sub-padding-interno lista-por-que">
                     <li>
                         Somos conscientes de que esta celebración es única y muy importante para vos y los tuyos.
                     </li>
@@ -116,10 +102,15 @@ include 'header.php'; ?>
                         Cuidamos cada detalle, desde la presentación de los platos, el servido de las bebidas, la vajilla utilizada, hasta la imagen y presencia de nuestro personal.
                     </li>
                 </ol>
+
             </div><!--- //.container -->
 
+            <figure>
+                <img src="<?php echo UPLOADSURL; ?>/cocina-ref.jpg" alt="Se Cuecen Habas cocina" class="image-responsive">
+            </figure>
+
             <div class="container">
-                <ul>
+                <ul class="padding-interno lista-expertise">
                     <li>
                         <h3>
                             200 mil Personas
@@ -146,56 +137,60 @@ include 'header.php'; ?>
                     </li>
                 </ul>
             </div><!--- //.container -->
-        </section>
-        <!--- //.section-elegirnos -->
+        </section><!--- //.section-elegirnos -->
 
         <!--- section-salones -->
-        <section id="salones">
+        <section id="salones" class="section-wrapper">
             <div class="container">
                 <hgroup>
-                    <h2>
+                    <h2 class="title-section">
                         Salones
                     </h2>
-                    <h3>
-                        Atención, Variedad & Calidad
+                    <h3 class="subtitle-section">
+                        Atención, Variedad & <em>Calidad</em>
                     </h3>
                 </hgroup>
-
             </div><!--- //.container -->
 
-            <img src="<?php echo UPLOADSURL; ?>/ref-fotos-salones.jpg" style="display:block;width:100%;margin:0 auto;">
-        </section>
-        <!--- //.section-salones -->
+            <?php getTemplate( 'salones' ); ?>
+
+        </section><!--- //.section-salones -->
 
         <!--- section-clientes -->
-        <section id="clientes">
+        <section id="clientes" class="section-wrapper">
             <div class="container">
-                <hgroup>
-                    <h2>
+                <hgroup class="padding-interno">
+                    <h2 class="title-section">
                         Clientes
                     </h2>
-                    <h3>
-                        Quiénes nos eligen
+                    <h3 class="subtitle-section">
+                        Quiénes nos <em>eligen</em>
                     </h3>
                 </hgroup>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut minim veniam.
-                </p>
-                <img src="<?php echo UPLOADSURL; ?>/logos-inferiores-ref@2x.png" style="display:block;width:100%;margin:0 auto;">
+                <div class="sub-padding-interno">
+                    <p class="text-center">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut minim veniam.
+                    </p>
+
+                    <?php getTemplate( 'clientes' ); ?>
+
+                </div>
+                
+                
+                
             </div><!--- //.container -->
-        </section>
-        <!--- //.section-clientes -->
+        </section><!--- //.section-clientes -->
 
         <!--- section-comentarios -->
-        <section id="experiencias ">
+        <section id="experiencias" class="section-wrapper">
             <img src="<?php echo UPLOADSURL; ?>/ref-comentarios.jpg" style="display:block;width:100%;margin:0 auto;">
             <!--<div class="container">
-                <hgroup>
-                    <h2>
-                        Salones
+                <hgroup class="padding-interno">
+                    <h2 class="title-section">
+                        Experiencias
                     </h2>
-                    <h3>
-                        Atención, Variedad & Calidad
+                    <h3 class="subtitle-section">
+                        Quiénes nos <em>recomiendan</em>
                     </h3>
                 </hgroup>
 
@@ -205,18 +200,21 @@ include 'header.php'; ?>
         <!--- //.section-comentarios -->
 
         <!--- section-contacto -->
-        <section id="contacto">
+        <section class="section-wrapper" id="contacto">
             <div class="container">
-                <hgroup>
-                    <h2>
+                <hgroup class="padding-interno">
+                    <h2 class="title-section">
                         Contacto
                     </h2>
-                    <h3>
-                        Contactate con nosotros
+                    <h3 class="subtitle-section">
+                        Contactate con <em>nosotros</em>
                     </h3>
                 </hgroup>
-                <div class="wrapper-form">
-                    <?php getTemplate('form'); ?>
+
+                <div class="wrapper-form sub-padding-interno">
+                    
+                    <?php getTemplate('formulario-contacto', $pageActual ); ?>
+
                 </div><!--- //.wrapper-form -->
             </div><!--- //.container -->
         </section>

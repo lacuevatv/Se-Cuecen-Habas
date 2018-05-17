@@ -11,6 +11,7 @@
 7.0 HEADER
 8.0 ANIMATIONS
 9.0 MAIN
+10.0 TIPOGRAFIAS
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 1.0 Reset
@@ -920,5 +921,87 @@ html, body {
 .inner-wrapper {
   position: relative;
   z-index: 0; }
+
+.section-wrapper {
+  padding: 40px 0; }
+
+.padding-interno {
+  padding: 0 5%; }
+  @media (min-width: 567px) {
+    .padding-interno {
+      padding: 0 10%; } }
+  @media (min-width: 992px) {
+    .padding-interno {
+      padding: 0; } }
+
+.sub-padding-interno {
+  padding: 0 10%; }
+  @media (min-width: 992px) {
+    .sub-padding-interno {
+      padding: 0;
+      width: 100%;
+      max-width: 778px;
+      display: block;
+      margin: 0 auto; } }
+
+/*
+ * SECTION INTRO
+*/
+#intro {
+  text-align: center; }
+  #intro .firma {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 360px; }
+
+/*
+ * SERVICIOS
+*/
+@media (min-width: 992px) {
+  #servicios .lista-servicios {
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between; } }
+
+/*
+ * POR QUE ELEGIRNOS
+*/
+@media (min-width: 992px) {
+  #elegirnos .lista-expertise {
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between; } }
+
+/*--------------------------------------------------------------
+10.0 TIPOGRAFIAS
+--------------------------------------------------------------*/
+.title-section {
+  font-family: "Flama", sans-serif;
+  text-transform: uppercase;
+  text-align: center; }
+
+.subtitle-section {
+  text-align: center;
+  font-size: 200%; }
+  .subtitle-section em {
+    font-style: italic; }
+
+.text-center {
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
