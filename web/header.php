@@ -59,7 +59,59 @@ global $dispositivo;
     ?>
     <header class="main-header">
         
-        <img src="<?php echo UPLOADSURL; ?>/ref-header-nav.jpg" style="display:block;width:100%;margin:0 auto;">
+        <nav class="nav-superior">
+            <button class="toggle">
+                <span class="tog1"></span>
+                <span class="tog2"></span>
+                <span class="tog3"></span>
+                <span class="sr-only">Menu</span>
+            </button>
+
+            <div class="main-menu">
+                <a href="#servicios" class="main-menu-item scroll-to">
+                    Servicios
+                </a>
+                
+                <a href="#salones" class="main-menu-item scroll-to">
+                    Salones
+                </a>
+                
+                <h1 class="brand-name">
+                    <span clasS="sr-only">Se Cuecen Habas Catering</span>
+                    <img src="<?php echo MAINSURL; ?>/assets/images/logo@2x.png" alt="Se Cuecen Habas Logo">
+                </h1>
+                
+                <a href="#clientes" class="main-menu-item scroll-to">
+                    Clientes
+                </a>
+            
+            
+                <a href="#contacto" class="main-menu-item scroll-to">
+                    Contacto
+                </a>
+                
+            </div>
+
+            <ul class="menu-redes-sup">
+                <li>
+                    <a href="<?php echo LINK_FACEBOOK; ?>" target="_blank" class="icon-facebook">
+                        <span class="sr-only">Facebook</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo LINK_TWITTER; ?>" target="_blank" class="icon-twitter">
+                        <span class="sr-only">Twitter</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo LINK_INSTAGRAM; ?>" target="_blank" class="icon-instagram">
+                        <span class="sr-only">Instagram</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <?php //getTemplate( 'slider-header' ) ?>
 
     </header> <!-- //.main-header -->
 
