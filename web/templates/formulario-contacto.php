@@ -1,4 +1,4 @@
-<form id="main-form" method="POST">
+<form id="main-form" class="formulario" method="POST">
 
     <div class="form-inner">
         <input type="text" name="name" placeholder="Nombre">
@@ -12,14 +12,25 @@
         <input type="email" name="email" placeholder="Email">
     </div>
 
-    <div class="form-inner">
+    <div class="form-inner form-inner-bigger">
         <input type="text" name="evento" placeholder="Tipo de Evento">
-        <div class="form-inner">
-            <input type="text" name="invitados" placeholder="Cantidad de invitados">
-            <input type="text" name="horario" placeholder="Horario">
+        <div class="form-inner-cols">
+            <input type="text" name="invitados" placeholder="Cantidad de invitados" class="widht-60">
+            <input type="text" name="horario" placeholder="Horario" class="widht-40">
         </div>
-        <input type="email" name="email" placeholder="Email">
+        <?php 
+            global $dispositivo;
+            if ( $dispositivo != 'pc') : ?>
+            <textarea name="msj">Dejanos tu consulta</textarea>    
+        <?php else : ?>
+            <textarea name="msj" placeholder="Dejanos tu consulta"></textarea>
+        <?php endif; ?>
+        
     </div>
-
-    <input type="submit" value="Enviar">
+    <div class="submit-wrapper">
+    
+        <span class="msj-error">El mensaje fue enviado, muchas gracias</span>
+    
+        <input type="submit" value="Enviar">
+    </div>
 </form>

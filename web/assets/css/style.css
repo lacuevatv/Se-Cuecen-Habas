@@ -606,13 +606,13 @@ html, body {
   .footer-address-wrapper .footer-contacto {
     margin: 0 auto;
     width: 100%;
-    max-width: 1100px;
-    padding: 50px 3%;
+    max-width: 900px;
+    padding: 50px 25px;
     font-size: 120%;
     line-height: 120%; }
     @media (min-width: 992px) {
       .footer-address-wrapper .footer-contacto {
-        font-size: 100%;
+        font-size: 85%;
         line-height: 100%;
         display: flex;
         display: -o-flex;
@@ -811,6 +811,11 @@ html, body {
 /*
  * ANIMATIONS
 */
+@keyframes blinking {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; } }
 .movil-element.slide-down.in-view {
   animation-name: slide-down;
   animation-duration: 1s;
@@ -949,31 +954,66 @@ html, body {
 */
 #intro {
   text-align: center; }
+  @media (min-width: 992px) {
+    #intro p {
+      padding: 0 25px; } }
   #intro .firma {
     display: block;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 360px; }
+    margin: 30px auto;
+    width: 80%;
+    max-width: 180px; }
 
 /*
  * SERVICIOS
 */
-@media (min-width: 992px) {
+#servicios {
+  background-color: #f8f8f8; }
   #servicios .lista-servicios {
-    display: flex;
-    display: -o-flex;
-    display: -ms-flex;
-    display: -moz-flex;
-    display: -webkit-flex;
-    -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
-    -ms-justify-content: space-between;
-    -o-justify-content: space-between;
-    justify-content: space-between; } }
+    margin-bottom: 40px; }
+    @media (min-width: 992px) {
+      #servicios .lista-servicios {
+        display: flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        justify-content: space-between;
+        margin-bottom: 70px; } }
+    #servicios .lista-servicios li {
+      background-color: #fff;
+      padding: 25px;
+      margin: 20px auto; }
+      @media (min-width: 992px) {
+        #servicios .lista-servicios li {
+          margin: 10px; } }
+  #servicios .btn-wrapper-center {
+    display: block;
+    width: 100%;
+    text-align: center; }
+    #servicios .btn-wrapper-center button {
+      cursor: pointer;
+      position: relative;
+      font-style: italic; }
+      #servicios .btn-wrapper-center button:after {
+        content: '';
+        position: absolute;
+        background-color: #2b292a;
+        width: 100%;
+        height: 1px;
+        bottom: 0px;
+        left: 0; }
 
 /*
  * POR QUE ELEGIRNOS
 */
+#elegirnos figure {
+  margin: 40px auto; }
+  #elegirnos figure img {
+    width: 100%; }
 @media (min-width: 992px) {
   #elegirnos .lista-expertise {
     display: flex;
@@ -981,11 +1021,235 @@ html, body {
     display: -ms-flex;
     display: -moz-flex;
     display: -webkit-flex;
-    -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
-    -ms-justify-content: space-between;
-    -o-justify-content: space-between;
-    justify-content: space-between; } }
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center; } }
+#elegirnos .lista-expertise li {
+  margin: 7px;
+  padding: 20px 45px;
+  border: 1px solid #2b292a;
+  text-align: center;
+  max-width: 340px; }
+  #elegirnos .lista-expertise li .icon-expertise {
+    background-color: transparent;
+    display: block;
+    height: 90px;
+    width: 100%;
+    border-bottom: 1px solid #2b292a;
+    margin-bottom: 30px; }
+  #elegirnos .lista-expertise li .icon-expertise-plato {
+    background: url("../images/plato.png");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: top; }
+  #elegirnos .lista-expertise li .icon-expertise-copa {
+    background: url("../images/copa.png");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: top; }
+  #elegirnos .lista-expertise li .icon-expertise-tenedor {
+    background: url("../images/tenedor.png");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center; }
+  #elegirnos .lista-expertise li h3 {
+    font-size: 150%;
+    margin-bottom: 20px; }
+    #elegirnos .lista-expertise li h3 em {
+      font-style: italic; }
+  #elegirnos .lista-expertise li p {
+    font-size: 80%;
+    line-height: 120%; }
+
+/*
+ * SALONES
+*/
+.salones-wrapper {
+  background-color: #f4f4f4; }
+  .salones-wrapper .loading-salones {
+    display: block;
+    text-align: center;
+    font-style: italic;
+    padding: 40px;
+    font-size: 90%; }
+    .salones-wrapper .loading-salones > span {
+      animation: blinking 500ms infinite; }
+  .salones-wrapper .wrapper-pagination {
+    padding: 20px; }
+    .salones-wrapper .wrapper-pagination .pagination {
+      display: flex;
+      display: -o-flex;
+      display: -ms-flex;
+      display: -moz-flex;
+      display: -webkit-flex;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      -o-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      -o-justify-content: center;
+      justify-content: center; }
+      .salones-wrapper .wrapper-pagination .pagination li {
+        cursor: pointer;
+        padding: 10px 5px;
+        margin: 0 5px;
+        font-style: italic; }
+        .salones-wrapper .wrapper-pagination .pagination li:after {
+          content: '.';
+          padding-left: 10px;
+          vertical-align: text-bottom; }
+        .salones-wrapper .wrapper-pagination .pagination li:last-child:after {
+          content: none; }
+      .salones-wrapper .wrapper-pagination .pagination .active {
+        font-weight: 700; }
+
+/*
+ * CLIENTES
+*/
+#clientes p {
+  margin-top: -20px;
+  margin-bottom: 50px; }
+
+/*
+ * CONTACTO
+*/
+#contacto {
+  background-color: #f4f4f4; }
+
+.formulario {
+  display: block;
+  width: 98%;
+  margin: 0 auto; }
+  @media (min-width: 992px) {
+    .formulario {
+      display: flex;
+      display: -o-flex;
+      display: -ms-flex;
+      display: -moz-flex;
+      display: -webkit-flex;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      -ms-justify-content: space-between;
+      -o-justify-content: space-between;
+      justify-content: space-between;
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      -o-flex-wrap: wrap;
+      flex-wrap: wrap; } }
+  @media (min-width: 992px) {
+    .formulario .form-inner {
+      padding: 0 1%;
+      width: 27%;
+      -webkit-flex-grow: 1;
+      -moz-flex-grow: 1;
+      -ms-flex-grow: 1;
+      -o-flex-grow: 1;
+      flex-grow: 1; } }
+  @media (min-width: 992px) {
+    .formulario .form-inner-bigger {
+      width: 45%; } }
+  @media (min-width: 992px) {
+    .formulario .form-inner-cols {
+      margin-top: -5px;
+      margin-bottom: -2px; }
+      .formulario .form-inner-cols > input {
+        width: 49%;
+        display: inline-block; }
+      .formulario .form-inner-cols .widht-60 {
+        width: 59.7%; }
+      .formulario .form-inner-cols .widht-40 {
+        width: 39%; } }
+  .formulario label {
+    display: none; }
+  .formulario input {
+    display: block;
+    width: 100%;
+    margin: 5px auto;
+    text-transform: uppercase;
+    color: #2b292a;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #2b292a;
+    padding: 5px; }
+    @media (min-width: 992px) {
+      .formulario input {
+        border: 1px solid #2b292a;
+        height: 27px; } }
+  .formulario textarea {
+    background-color: transparent;
+    padding: 5px;
+    display: block;
+    width: 100%;
+    margin: 2px auto;
+    color: #2b292a;
+    height: 100px; }
+    @media (min-width: 992px) {
+      .formulario textarea {
+        height: 27px;
+        border: 1px solid #2b292a;
+        text-transform: uppercase;
+        line-height: 120%;
+        font-size: 100%; } }
+  .formulario input[type=submit] {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    display: inline-block;
+    width: auto;
+    background-color: #2b292a;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 20px; }
+    @media (min-width: 992px) {
+      .formulario input[type=submit] {
+        height: auto;
+        padding: 7px 20px 6px;
+        line-height: 100%; } }
+  .formulario ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    text-transform: uppercase;
+    color: #2b292a; }
+    @media (min-width: 992px) {
+      .formulario ::-webkit-input-placeholder {
+        font-size: 80%; } }
+  .formulario ::-moz-placeholder {
+    /* Firefox 19+ */
+    text-transform: uppercase;
+    color: #2b292a; }
+    @media (min-width: 992px) {
+      .formulario ::-moz-placeholder {
+        font-size: 80%; } }
+  .formulario :-ms-input-placeholder {
+    /* IE 10+ */
+    text-transform: uppercase;
+    color: #2b292a; }
+    @media (min-width: 992px) {
+      .formulario :-ms-input-placeholder {
+        font-size: 80%; } }
+  .formulario :-moz-placeholder {
+    /* Firefox 18- */
+    text-transform: uppercase;
+    color: #2b292a; }
+    @media (min-width: 992px) {
+      .formulario :-moz-placeholder {
+        font-size: 80%; } }
+  .formulario .submit-wrapper {
+    width: 100%;
+    text-align: center;
+    margin: 30px auto; }
+  .formulario .msj-error {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+    font-style: italic;
+    font-weight: 600; }
 
 /*--------------------------------------------------------------
 10.0 TIPOGRAFIAS
@@ -993,11 +1257,15 @@ html, body {
 .title-section {
   font-family: "Flama", sans-serif;
   text-transform: uppercase;
-  text-align: center; }
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 25px; }
 
 .subtitle-section {
   text-align: center;
-  font-size: 200%; }
+  font-size: 200%;
+  line-height: 150%;
+  margin-bottom: 40px; }
   .subtitle-section em {
     font-style: italic; }
 

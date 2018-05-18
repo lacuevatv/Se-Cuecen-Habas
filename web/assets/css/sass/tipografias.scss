@@ -2,11 +2,15 @@
     font-family: $fuente-secundaria;
     text-transform: uppercase;
     text-align: center;
+    margin-top: 5px;
+    margin-bottom: 25px;
 }
 
 .subtitle-section {
     text-align: center;
     font-size: 200%;
+    line-height: 150%;
+    margin-bottom: 40px;
 
     em {
         font-style: italic;

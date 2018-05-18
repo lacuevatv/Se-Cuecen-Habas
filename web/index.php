@@ -11,8 +11,8 @@ global $pageActual;
 global $dispositivo;
 $dispositivo = 'pc';
 $pageActual = pageActual( cleanUri() );
-if ( dispositivo() == 'movil' ) {
-    $dispositivo = 'movil';
+if ( dispositivo() != 'pc' ) {
+    $dispositivo = dispositivo();
 }
 
 include 'header.php'; ?>
@@ -67,8 +67,10 @@ include 'header.php'; ?>
                     </li><!--- //servicio Item:gourmet -->
                 
                 </ul><!--- //servicios:criollo y gourmet -->
-
-                <button>Ver imágenes</button>
+                
+                <div class="btn-wrapper-center">
+                    <button>Ver imágenes</button>
+                </div>
 
             </div><!--- //.container -->
         </section><!--- //.section-servicios -->
@@ -105,31 +107,34 @@ include 'header.php'; ?>
 
             </div><!--- //.container -->
 
-            <figure>
-                <img src="<?php echo UPLOADSURL; ?>/cocina-ref.jpg" alt="Se Cuecen Habas cocina" class="image-responsive">
+            <figure class="load-images" data-src="<?php echo UPLOADSURL; ?>/cocina-ref.jpg">
+            
             </figure>
 
             <div class="container">
                 <ul class="padding-interno lista-expertise">
                     <li>
+                        <span class="icon-expertise icon-expertise-plato"></span>
                         <h3>
-                            200 mil Personas
+                            200 mil <em>Personas</em>
                         </h3>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut minim veniam.
                         </p>
                     </li>
                     <li>
+                        <span class="icon-expertise icon-expertise-copa"></span>
                         <h3>
-                            600 eventos
+                            600 <em>eventos</em>
                         </h3>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut minim veniam.
                         </p>
                     </li>
                     <li>
+                        <span class="icon-expertise icon-expertise-tenedor"></span>
                         <h3>
-                            150 cocineros
+                            150 <em>cocineros</em>
                         </h3>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut minim veniam.
@@ -151,8 +156,13 @@ include 'header.php'; ?>
                     </h3>
                 </hgroup>
             </div><!--- //.container -->
-
-            <?php getTemplate( 'salones' ); ?>
+            
+            <div class="salones-wrapper">
+                
+                <div class="loading-salones">Cargando contenido.<span style="animation-delay: 500ms;">.</span><span style="animation-delay: 1000ms;">.</span></div>
+                <?php //getTemplate( 'salones' ); ?>
+            
+            </div><!--- //.salones-wrapper -->
 
         </section><!--- //.section-salones -->
 

@@ -1,6 +1,11 @@
  /*
   * ANIMATIONS
  */
+@keyframes blinking {
+	0% {opacity: 0;}
+	50% {opacity: 1;}
+}
+
  //slide down flecha header
  .movil-element.slide-down.in-view {
 	animation-name: slide-down;

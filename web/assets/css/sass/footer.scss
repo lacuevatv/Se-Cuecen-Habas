@@ -12,12 +12,12 @@
     .footer-contacto {
         margin: 0 auto;
         width: 100%;
-        max-width: 1100px;
-        padding: 50px 3%;
+        max-width: 900px;
+        padding: 50px 25px;
         font-size: 120%;
         line-height: 120%;
         @media (min-width: $md) {
-            font-size: 100%;
+            font-size: 85%;
             line-height: 100%;
             display: flex;
             display: -o-flex;
