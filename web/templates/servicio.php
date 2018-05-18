@@ -4,9 +4,13 @@
 
 if ($data == 'criollo' ) : ?>
 
-    <article>
-        <h1>
-            Criollo
+    <article class="servicio-item">
+        <figure>
+            
+        </figure>
+
+        <h1 class="h1-criollo">
+            <span class="sr-only">Criollo</span>
         </h1>
         <p>
             Nuestros asados están hechos por Expertos asadores muy lentamente al rescoldo del fogón. Disfruta de la Calidad de la Tradicional carne Argentina con nuestra selección de Novillitos Aberdeen Angus criados en los mejores campos de la Región Pampeana.
@@ -18,9 +22,12 @@ if ($data == 'criollo' ) : ?>
 
 <?php else : ?>
 
-    <article>
-        <h1>
-            Gourmet
+    <article class="servicio-item">
+        <figure>
+            
+        </figure>
+        <h1 class="h1-gourmet">
+            <span class="sr-only">Gourmet</span>
         </h1>
         <p>
             Disfruta de la más variada selección de Sabores Gourmet, con productos elegidos y obtenidos de los lugares donde mejor expresan su calidad. Cada Bocado o Plato es tratado por nuestros Expertos Chefs con el cuidado y experiencia que se merecen.

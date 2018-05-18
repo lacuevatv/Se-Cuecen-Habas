@@ -88,19 +88,19 @@ include 'header.php'; ?>
                 </hgroup>
                 
                 <ol class="sub-padding-interno lista-por-que">
-                    <li>
+                    <li><span>01</span><br>
                         Somos conscientes de que esta celebración es única y muy importante para vos y los tuyos.
                     </li>
-                    <li>
+                    <li><span>02</span><br>
                         Sabemos que la base del éxito en tu evento es q todos coman sabroso y beban a gusto.
                     </li>
-                    <li>
+                    <li><span>03</span><br>
                         Aceptamos sin dudar el desafío de sorprender los paladares más exigentes.
                     </li>
-                    <li>
+                    <li><span>04</span><br>
                         Aportamos estética como agregado de valor, nos gusta, consumimos y vivimos diseño.
                     </li>
-                    <li>
+                    <li><span>05</span><br>
                         Cuidamos cada detalle, desde la presentación de los platos, el servido de las bebidas, la vajilla utilizada, hasta la imagen y presencia de nuestro personal.
                     </li>
                 </ol>
@@ -193,19 +193,11 @@ include 'header.php'; ?>
 
         <!--- section-comentarios -->
         <section id="experiencias" class="section-wrapper">
-            <img src="<?php echo UPLOADSURL; ?>/ref-comentarios.jpg" style="display:block;width:100%;margin:0 auto;">
-            <!--<div class="container">
-                <hgroup class="padding-interno">
-                    <h2 class="title-section">
-                        Experiencias
-                    </h2>
-                    <h3 class="subtitle-section">
-                        Quiénes nos <em>recomiendan</em>
-                    </h3>
-                </hgroup>
+            
+            <div class="loading-salones">Cargando contenido.<span style="animation-delay: 500ms;">.</span><span style="animation-delay: 1000ms;">.</span></div>
 
-            </div><!--- //.container -->
-    
+            <?php //getTemplate( 'recomendaciones' ); ?>    
+        
         </section>
         <!--- //.section-comentarios -->
 

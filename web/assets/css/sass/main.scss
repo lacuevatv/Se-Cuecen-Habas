@@ -103,12 +103,114 @@
     }
 }//#servicios
 
+.servicio-item {
+    >figure {
+        width: 100%;
+        background-color: $color-gris-claro;
+        height: 160px;
+        @media (min-width: $sm) {
+            height: 340px;
+        }
+    }
+
+    h1 {
+        position: relative;
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        top: -60px;
+        height: 150px;
+        width: 150px;
+        background: $color-blanco;
+        @include border-radius(50%);
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform(translate3d(-50%,-50%,0));
+        }
+    }
+
+    .h1-criollo {
+        &:before {
+            height: 114px;
+            width: 79px;
+            background: url('../images/criollo@2x.png') no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+    }
+
+    .h1-gourmet {
+        &:before {
+            height: 101px;
+            width: 92px;
+            background: url('../images/gourmet@2x.png') no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+    }
+
+    p {
+        margin-top: -40px;
+        text-align: center;
+        font-size: 90%;
+        @media (min-width: $sm) {
+            padding: 0 30px;
+        }
+    }
+
+    button {
+        cursor: pointer;
+        display: block;
+        margin: 20px auto;
+        border: 1px solid $color-negro;
+        padding: 7px 25px 5px;
+    }
+}//.servicio-item
+
 /*
  * POR QUE ELEGIRNOS
 */
 #elegirnos {
     .lista-por-que {
-
+        @media (min-width: $md) {
+            columns: 2;
+            column-gap: 50px;
+        }
+        li {
+            position: relative;
+            text-align: center;
+            @media (min-width: $md) {
+                text-align: left;
+            }
+            
+            span {
+                display: inline-block;
+                text-align: center;
+                font-style: italic;
+                border-bottom: 1px solid $color-negro;
+                font-size: 120%;
+                width: 50px;
+                margin:20px auto 10px;
+                @media (min-width: $md) {
+                    position: relative;
+                    border-bottom: none;
+                    text-align: left;
+                    &:after {
+                        content: '';
+                        height: 1px;
+                        width: 60px;
+                        background-color: $color-negro;
+                        position: absolute;
+                        bottom: 7px;
+                        left: 25px;
+                    }
+                }
+            }
+        }
     }//.lista-por-que
 
     figure {
@@ -134,7 +236,7 @@
         }
 
         li {
-            margin: 7px;
+            margin: 7px auto;
             padding: 20px 45px;
             border: 1px solid $color-negro;
             text-align: center;
@@ -260,6 +362,23 @@
         margin-bottom: 50px;
     }
 }//#clientes
+
+
+#experiencias {
+background-color: $color-gris-claro;
+
+    .loading-salones {
+        display: block;
+        text-align: center;
+        font-style: italic;
+        padding: 40px;
+        font-size: 90%;
+
+        > span {
+            animation: blinking 500ms infinite;
+        }
+    }
+ }//#experiencias
 
 
 /*
