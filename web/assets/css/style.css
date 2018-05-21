@@ -154,13 +154,17 @@ button {
     font-style: normal;
 }
 */
-@font-face {
-  font-family: 'Flama Basic';
-  src: url("../fonts/flama/flama-basic.eot");
-  src: url("../fonts/flama/flama-basic.woff") format("woff"), url("../fonts/flama/flama-basic.otf") format("opentype"), url("../fonts/flama/flama-basic.svg") format("svg");
-  font-weight: normal;
-  font-style: normal; }
 /*fuente q no se usa
+@font-face {
+    font-family: 'Flama Basic';
+    src: url('../fonts/flama/flama-basic.eot');
+    src: url('../fonts/flama/flama-basic.woff') format('woff'),
+        url('../fonts/flama/flama-basic.otf') format('opentype'),
+        url('../fonts/flama/flama-basic.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @font-face {
     font-family: 'Flama Basic';
     src: url('../fonts/flama/flama-basicitalic.eot');
@@ -345,17 +349,13 @@ button {
     font-style: italic;
 }
 */
-/*fuente que no se usa
 @font-face {
-    font-family: 'DIN Next LT Pro';
-    src: url('../fonts/din-next-lt-pro/dinnextltpro-regular.eot');
-    src: url('../fonts/din-next-lt-pro/dinnextltpro-regular.woff') format('woff'),
-        url('../fonts/din-next-lt-pro/dinnextltpro-regular.otf') format('opentype'),
-        url('../fonts/din-next-lt-pro/dinnextltpro-regular.svg') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
+  font-family: 'DIN Next LT Pro';
+  src: url("../fonts/din-next-lt-pro/dinnextltpro-regular.eot");
+  src: url("../fonts/din-next-lt-pro/dinnextltpro-regular.woff") format("woff"), url("../fonts/din-next-lt-pro/dinnextltpro-regular.otf") format("opentype"), url("../fonts/din-next-lt-pro/dinnextltpro-regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/*fuente que no se usa
 @font-face {
     font-family: 'DIN Next LT Pro';
     src: url('../fonts/din-next-lt-pro/dinnextltpro-italic.eot');
@@ -427,14 +427,17 @@ button {
     font-weight: 700;
     font-style: italic;
 }
-*/
+
 @font-face {
-  font-family: 'DIN Next LT Pro';
-  src: url("../fonts/din-next-lt-pro/dinnextltpro-boldcondensed.eot");
-  src: url("../fonts/din-next-lt-pro/dinnextltpro-boldcondensed.woff") format("woff"), url("../fonts/din-next-lt-pro/dinnextltpro-boldcondensed.otf") format("opentype"), url("../fonts/din-next-lt-pro/dinnextltpro-boldcondensed.svg") format("svg");
-  font-weight: 700;
-  font-style: normal;
-  font-stretch: condensed; }
+    font-family: 'DIN Next LT Pro';
+    src: url('../fonts/din-next-lt-pro/dinnextltpro-boldcondensed.eot');
+    src: url('../fonts/din-next-lt-pro/dinnextltpro-boldcondensed.woff') format('woff'),
+        url('../fonts/din-next-lt-pro/dinnextltpro-boldcondensed.otf') format('opentype'),
+        url('../fonts/din-next-lt-pro/dinnextltpro-boldcondensed.svg') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: condensed;
+}*/
 /*--------------------------------------------------------------
 3.0 variables
 --------------------------------------------------------------*/
@@ -643,7 +646,7 @@ html, body {
 
 .footer-redes-wrapper {
   position: relative;
-  font-family: "Flama", sans-serif;
+  font-family: "DIN Next LT Pro", "Flama", sans-serif;
   background-color: #fff;
   color: #2b292a;
   text-transform: uppercase;
@@ -1187,7 +1190,9 @@ html, body {
     #servicios .btn-wrapper-center button {
       cursor: pointer;
       position: relative;
-      font-style: italic; }
+      font-style: italic;
+      font-weight: 600;
+      font-size: 120%; }
       #servicios .btn-wrapper-center button:after {
         content: '';
         position: absolute;
@@ -1242,16 +1247,17 @@ html, body {
 .servicio-item p {
   margin-top: -40px;
   text-align: center;
-  font-size: 90%; }
+  font-size: 95%; }
   @media (min-width: 767px) {
     .servicio-item p {
       padding: 0 30px; } }
 .servicio-item button {
   cursor: pointer;
   display: block;
-  margin: 20px auto;
+  margin: 30px auto 20px;
   border: 1px solid #2b292a;
-  padding: 7px 25px 5px; }
+  padding: 7px 25px 5px;
+  font-weight: 600; }
 
 /*
  * POR QUE ELEGIRNOS
@@ -1270,6 +1276,7 @@ html, body {
     display: inline-block;
     text-align: center;
     font-style: italic;
+    font-weight: 600;
     border-bottom: 1px solid #2b292a;
     font-size: 120%;
     width: 50px;
@@ -1309,6 +1316,9 @@ html, body {
   border: 1px solid #2b292a;
   text-align: center;
   max-width: 340px; }
+  @media (min-width: 992px) {
+    #elegirnos .lista-expertise li {
+      margin: 7px 1%; } }
   #elegirnos .lista-expertise li .icon-expertise {
     background-color: transparent;
     display: block;
@@ -1333,7 +1343,8 @@ html, body {
     background-position: center; }
   #elegirnos .lista-expertise li h3 {
     font-size: 150%;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    font-weight: 600; }
     #elegirnos .lista-expertise li h3 em {
       font-style: italic; }
   #elegirnos .lista-expertise li p {
@@ -1464,7 +1475,8 @@ html, body {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #2b292a;
-    padding: 5px; }
+    padding: 5px;
+    font-family: "Flama Book", "Flama", sans-serif; }
     @media (min-width: 992px) {
       .formulario input {
         border: 1px solid #2b292a;
@@ -1502,28 +1514,32 @@ html, body {
   .formulario ::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
     text-transform: uppercase;
-    color: #2b292a; }
+    color: #2b292a;
+    font-family: "Flama Book", "Flama", sans-serif; }
     @media (min-width: 992px) {
       .formulario ::-webkit-input-placeholder {
         font-size: 80%; } }
   .formulario ::-moz-placeholder {
     /* Firefox 19+ */
     text-transform: uppercase;
-    color: #2b292a; }
+    color: #2b292a;
+    font-family: "Flama Book", "Flama", sans-serif; }
     @media (min-width: 992px) {
       .formulario ::-moz-placeholder {
         font-size: 80%; } }
   .formulario :-ms-input-placeholder {
     /* IE 10+ */
     text-transform: uppercase;
-    color: #2b292a; }
+    color: #2b292a;
+    font-family: "Flama Book", "Flama", sans-serif; }
     @media (min-width: 992px) {
       .formulario :-ms-input-placeholder {
         font-size: 80%; } }
   .formulario :-moz-placeholder {
     /* Firefox 18- */
     text-transform: uppercase;
-    color: #2b292a; }
+    color: #2b292a;
+    font-family: "Flama Book", "Flama", sans-serif; }
     @media (min-width: 992px) {
       .formulario :-moz-placeholder {
         font-size: 80%; } }
@@ -1556,13 +1572,15 @@ html, body {
   text-align: center;
   font-size: 180%;
   line-height: 130%;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  font-weight: 600; }
   @media (min-width: 567px) {
     .subtitle-section {
       font-size: 200%;
       line-height: 150%;
       margin-bottom: 40px; } }
   .subtitle-section em {
+    font-weight: 700;
     font-style: italic; }
 
 .text-center {

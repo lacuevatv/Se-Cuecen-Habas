@@ -14,6 +14,7 @@
     font-size: 180%;
     line-height: 130%;
     margin-bottom: 30px;
+    font-weight: 600;
     @media (min-width: $xs) {
         font-size: 200%;
         line-height: 150%;
@@ -21,6 +22,7 @@
     }
 
     em {
+        font-weight: 700;
         font-style: italic;
     }
 }

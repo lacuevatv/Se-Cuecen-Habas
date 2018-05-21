@@ -90,6 +90,8 @@
             cursor: pointer;
             position: relative;
             font-style: italic;
+            font-weight: 600;
+            font-size: 120%;
             &:after {
                 content: '';
                 position: absolute;
@@ -156,7 +158,7 @@
     p {
         margin-top: -40px;
         text-align: center;
-        font-size: 90%;
+        font-size: 95%;
         @media (min-width: $sm) {
             padding: 0 30px;
         }
@@ -165,9 +167,10 @@
     button {
         cursor: pointer;
         display: block;
-        margin: 20px auto;
+        margin: 30px auto 20px;
         border: 1px solid $color-negro;
         padding: 7px 25px 5px;
+        font-weight: 600;
     }
 }//.servicio-item
 
@@ -191,6 +194,7 @@
                 display: inline-block;
                 text-align: center;
                 font-style: italic;
+                font-weight: 600;
                 border-bottom: 1px solid $color-negro;
                 font-size: 120%;
                 width: 50px;
@@ -241,7 +245,10 @@
             border: 1px solid $color-negro;
             text-align: center;
             max-width: 340px;
-
+            @media (min-width: $md) {
+                margin: 7px 1%;
+            }
+            
             .icon-expertise {
                 background-color: transparent;
                 display: block;
@@ -273,6 +280,7 @@
             h3 {
                 font-size: 150%;
                 margin-bottom: 20px;
+                font-weight: 600;
                 em {
                     font-style: italic;
                 }
@@ -462,6 +470,7 @@ background-color: $color-gris-claro;
         border: none;
         border-bottom: 1px solid $color-negro;
         padding: 5px;
+        font-family: $fuente-secundaria-book;
         @media (min-width: $md) {
             border: 1px solid $color-negro;
             height: 27px;
@@ -505,6 +514,7 @@ background-color: $color-gris-claro;
     ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
         text-transform: uppercase;
         color: $color-negro;
+        font-family: $fuente-secundaria-book;
         @media (min-width: $md) {
             font-size: 80%;
         }
@@ -512,6 +522,7 @@ background-color: $color-gris-claro;
     ::-moz-placeholder { /* Firefox 19+ */
         text-transform: uppercase;
         color: $color-negro;
+        font-family: $fuente-secundaria-book;
         @media (min-width: $md) {
             font-size: 80%;
         }
@@ -519,6 +530,7 @@ background-color: $color-gris-claro;
     :-ms-input-placeholder { /* IE 10+ */
         text-transform: uppercase;
         color: $color-negro;
+        font-family: $fuente-secundaria-book;
         @media (min-width: $md) {
             font-size: 80%;
         }
@@ -526,6 +538,7 @@ background-color: $color-gris-claro;
     :-moz-placeholder { /* Firefox 18- */
         text-transform: uppercase;
         color: $color-negro;
+        font-family: $fuente-secundaria-book;
         @media (min-width: $md) {
             font-size: 80%;
         }
