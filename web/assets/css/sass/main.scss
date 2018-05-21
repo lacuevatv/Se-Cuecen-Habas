@@ -471,6 +471,7 @@ background-color: $color-gris-claro;
         border-bottom: 1px solid $color-negro;
         padding: 5px;
         font-family: $fuente-secundaria-book;
+        font-size: 80%;
         @media (min-width: $md) {
             border: 1px solid $color-negro;
             height: 27px;
@@ -478,6 +479,7 @@ background-color: $color-gris-claro;
     }
 
     textarea {
+        font-size: 80%;
         background-color: transparent;
         padding: 5px;
         display: block;
@@ -485,12 +487,14 @@ background-color: $color-gris-claro;
         margin: 2px auto;
         color: $color-negro;
         height: 100px;
+        font-family: $fuente-secundaria-book;
         @media (min-width: $md) {
             height: 27px;
             border: 1px solid $color-negro;
             text-transform: uppercase;
-            line-height: 120%;
-            font-size: 100%;
+            line-height: 110%;
+            font-size: 80%;
+            padding: 7px 5px 5px;
         }
     }
 

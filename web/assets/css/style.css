@@ -1476,26 +1476,30 @@ html, body {
     border: none;
     border-bottom: 1px solid #2b292a;
     padding: 5px;
-    font-family: "Flama Book", "Flama", sans-serif; }
+    font-family: "Flama Book", "Flama", sans-serif;
+    font-size: 80%; }
     @media (min-width: 992px) {
       .formulario input {
         border: 1px solid #2b292a;
         height: 27px; } }
   .formulario textarea {
+    font-size: 80%;
     background-color: transparent;
     padding: 5px;
     display: block;
     width: 100%;
     margin: 2px auto;
     color: #2b292a;
-    height: 100px; }
+    height: 100px;
+    font-family: "Flama Book", "Flama", sans-serif; }
     @media (min-width: 992px) {
       .formulario textarea {
         height: 27px;
         border: 1px solid #2b292a;
         text-transform: uppercase;
-        line-height: 120%;
-        font-size: 100%; } }
+        line-height: 110%;
+        font-size: 80%;
+        padding: 7px 5px 5px; } }
   .formulario input[type=submit] {
     cursor: pointer;
     border: none;

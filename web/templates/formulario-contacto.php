@@ -29,7 +29,7 @@
     </div>
     <div class="submit-wrapper">
     
-        <span class="msj-error">El mensaje fue enviado, muchas gracias</span>
+        <span class="msj-error"></span>
     
         <input type="submit" value="Enviar">
     </div>
