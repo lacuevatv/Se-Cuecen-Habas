@@ -32,11 +32,25 @@ if( isAjax() ) {
 
 		break;
 
-		
+		case 'slider-home' :
+			//busca sliders:
+			$sliders = getSliders();
+			if ( $sliders != null ) {
+				getTemplate( 'sliders', $sliders );
+			}
+			
+		break;
 
-
+		case 'experiencias' :
+			
+			$comentarios = getPosts( 'comentarios' );
+			if ( $comentarios != null ) {
+				getTemplate( 'recomendaciones', $comentarios );
+			}
+			
+		break;
 		
-	}
+	}//switch
 
 	
 //sino es peticion ajax se cancela

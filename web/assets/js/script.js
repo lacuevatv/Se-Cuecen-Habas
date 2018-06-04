@@ -418,7 +418,6 @@ $(document).ready(function() {
 --------------------------------------------------------------*/
 
 $(window).on('load', function(){
-
     var popup = $( '.popup' );
     var popupIMG = $( '.popup img' );
     var tiempo = 7000;
@@ -447,42 +446,83 @@ $(window).on('load', function(){
 
 /*--------------------------------------------------------------
 3.0 OWL SLIDERS
+** slider del home
+** comentarios
 --------------------------------------------------------------*/
 
-
-//CARGA SLIDER EN MÁS 18
 $(window).on('load', function(){
-    
-   /* $('#owl-partners').owlCarousel({
-	    loop:true,
-        margin:10,
-        slideSpeed : 2000,
-        nav:false,
-        doots: true,
-        autoplay: true,
-	    //navText : ['<span class="icon-arrow icon-arrow-left"></span>','<span class="icon-arrow icon-arrow-right"></span>'],
-	    responsive:{
-	        0:{
-	            items:1
-	        },
-	    }
-    });//owl*/
-    
+    (function () {
+        var contenedorSliders = $('.wrapper-slider');
+        var contenedorRecomendaciones = $('#experiencias');
+        //ajax de sliders
+        $.ajax( {
+            type: 'POST',
+            url: ajaxFileUrl,
+            data: {
+                function: 'slider-home',
+            },
+            success: function ( response ) {
+                contenedorSliders.append(response);
+                owlCarouselStart ('#slider_home');
+                var h = $('.sliders li').prop('scrollHeight')
+                contenedorSliders.animate({
+                    'height': h+'px',
+                }, 500);
+            },
+            error: function ( ) {
+                console.log('error');
+            },
+        });//cierre ajax
+        //ajax de comentarios
+        $.ajax( {
+            type: 'POST',
+            url: ajaxFileUrl,
+            data: {
+                function: 'experiencias',
+            },
+            beforeSend: function () {
+                //quitar el div de loading
+                $(contenedorRecomendaciones).find('.loading-salones').fadeOut();
+            },
+            success: function ( response ) {
+                console.log(response);
+            
+                //insertar la imagen
+                $(contenedorRecomendaciones).css('background-image', 'url(contenido/cuatro.jpg)');
+                //insertar la respuesta de html
+                $(contenedorRecomendaciones).append(response)
+                //iniciar el slider
+                owlCarouselStart ('#owl-comentarios');
+                var h = $('.recomendaciones-wrapper').prop('scrollHeight')
+                contenedorRecomendaciones.animate({
+                    'height': h+'px',
+                }, 500);
+            },
+            error: function ( ) {
+                console.log('error');
+            },
+        });//cierre ajax
 
-    $('#slider_home').owlCarousel({
-	    loop:true,
-	    margin:10,
-        nav:true,
-        doots: true,
-	    navText : ['<span class="icon-arrow icon-arrow-left"></span>','<span class="icon-arrow icon-arrow-right"></span>'],
-	    responsive:{
-	        0:{
-	            items:1
-	        },
-	    }
-	});//owl
+    })(); 
+
+    
 
 });//on load
+
+function owlCarouselStart (item) {
+    $(item).owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        doots: true,
+        navText : ['<span class="icon-arrow icon-arrow-left"></span>','<span class="icon-arrow icon-arrow-right"></span>'],
+        responsive:{
+            0:{
+                items:1
+            },
+        }
+    }); 
+}
 
 
 

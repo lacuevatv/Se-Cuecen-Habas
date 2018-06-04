@@ -20,8 +20,9 @@ include 'header.php'; ?>
     
 <main role="main" class="main-wrapper">
     <div class="inner-wrapper">
-
-    <?php getTemplate( 'sliders' ); ?>
+        <div class="wrapper-slider">
+            <?php //getTemplate( 'sliders' ); ?>
+        </div>
 
     <!--- .section-intro -->
         <section id="intro" class="section-wrapper">
@@ -197,10 +198,7 @@ include 'header.php'; ?>
 
         <!--- section-comentarios -->
         <section id="experiencias" class="section-wrapper">
-            
-            <div class="loading-salones">Cargando contenido.<span style="animation-delay: 500ms;">.</span><span style="animation-delay: 1000ms;">.</span></div>
-
-            <?php //getTemplate( 'recomendaciones' ); ?>    
+              
         
         </section>
         <!--- //.section-comentarios -->

@@ -1157,6 +1157,8 @@ html, body {
     max-width: 180px; }
 
 .wrapper-slider {
+  height: 0;
+  overflow: hidden;
   position: relative; }
   .wrapper-slider .sliders li {
     position: relative;
@@ -1471,16 +1473,58 @@ html, body {
   margin-top: -20px;
   margin-bottom: 50px; }
 
+/*
+ * EXPERIENCIAS
+*/
 #experiencias {
-  background-color: #f4f4f4; }
-  #experiencias .loading-salones {
-    display: block;
-    text-align: center;
-    font-style: italic;
-    padding: 40px;
-    font-size: 90%; }
-    #experiencias .loading-salones > span {
-      animation: blinking 500ms infinite; }
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  background-color: #f4f4f4;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s; }
+  #experiencias .title-section, #experiencias .subtitle-section {
+    color: #fff; }
+
+.recomendaciones-wrapper {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 70px 0;
+  position: relative;
+  height: 550px;
+  width: 100%; }
+  @media (min-width: 567px) {
+    .recomendaciones-wrapper {
+      height: 650px; } }
+  @media (min-width: 992px) {
+    .recomendaciones-wrapper {
+      height: 450px; } }
+  .recomendaciones-wrapper .comentarios {
+    margin-top: 70px; }
+    .recomendaciones-wrapper .comentarios li {
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 130%;
+      line-height: 150%;
+      color: #fff; }
+      @media (min-width: 567px) {
+        .recomendaciones-wrapper .comentarios li {
+          font-size: 170%; } }
+      .recomendaciones-wrapper .comentarios li em {
+        font-style: italic;
+        font-weight: 700; }
+      .recomendaciones-wrapper .comentarios li strong {
+        font-weight: 700; }
+      .recomendaciones-wrapper .comentarios li .name {
+        font-size: 50%;
+        margin: 30px 0 10px;
+        text-transform: uppercase;
+        font-family: "Flama", sans-serif; }
 
 /*
  * CONTACTO
