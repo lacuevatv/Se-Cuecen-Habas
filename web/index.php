@@ -21,6 +21,8 @@ include 'header.php'; ?>
 <main role="main" class="main-wrapper">
     <div class="inner-wrapper">
 
+    <?php getTemplate( 'sliders' ); ?>
+
     <!--- .section-intro -->
         <section id="intro" class="section-wrapper">
             <div class="container padding-interno">

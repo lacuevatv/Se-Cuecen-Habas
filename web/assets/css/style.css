@@ -1156,6 +1156,49 @@ html, body {
     width: 80%;
     max-width: 180px; }
 
+.wrapper-slider {
+  position: relative; }
+  .wrapper-slider .sliders li {
+    position: relative;
+    width: 100%;
+    height: 388px; }
+    @media (min-width: 992px) {
+      .wrapper-slider .sliders li {
+        height: 488px; } }
+    @media (min-width: 1500px) {
+      .wrapper-slider .sliders li {
+        height: 688px; } }
+  .wrapper-slider .sliders .image-background {
+    height: 100%;
+    width: 100%;
+    background: #f4f4f4;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+  .wrapper-slider .sliders .owl-dots {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    height: 20px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%); }
+  .wrapper-slider .sliders .owl-dot {
+    float: left;
+    margin: 2px;
+    display: block;
+    border: 1px solid #2b292a;
+    background: transparent;
+    width: 10px;
+    height: 10px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%; }
+  .wrapper-slider .sliders .active {
+    background-color: #2b292a; }
+
 /*
  * SERVICIOS
 */
@@ -1182,7 +1225,8 @@ html, body {
       margin: 20px auto; }
       @media (min-width: 992px) {
         #servicios .lista-servicios li {
-          margin: 10px; } }
+          margin: 10px;
+          width: 50%; } }
   #servicios .btn-wrapper-center {
     display: block;
     width: 100%;
@@ -1205,10 +1249,34 @@ html, body {
 .servicio-item > figure {
   width: 100%;
   background-color: #f4f4f4;
-  height: 160px; }
+  height: 160px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center; }
   @media (min-width: 767px) {
     .servicio-item > figure {
       height: 340px; } }
+  .servicio-item > figure > img {
+    position: absolute;
+    display: block;
+    width: 120%; }
+    @media (min-width: 1500px) {
+      .servicio-item > figure > img {
+        width: 100%; } }
 .servicio-item h1 {
   position: relative;
   text-align: center;

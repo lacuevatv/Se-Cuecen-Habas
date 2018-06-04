@@ -48,6 +48,58 @@
     }
 }//#intro
 
+.wrapper-slider {
+    
+    position: relative;
+
+    .sliders {
+
+        li {
+            position: relative;
+            width: 100%;
+            height: 388px;
+            @media (min-width: $md) {
+                height: 488px;
+            }
+
+            @media (min-width: $xlg) {
+                height: 688px;
+            }
+        }
+        .image-background {
+            height: 100%;
+            width: 100%;
+            background: $color-gris-claro;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .owl-dots {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            height: 20px;
+            @include transform(translateX(-50%));
+        }
+        .owl-dot {
+            float: left;
+            margin: 2px;
+            display: block;
+            border: 1px solid $color-negro;
+            background: transparent;
+            width: 10px;
+            height: 10px;
+            @include border-radius(50%);
+        }
+
+        .active {
+            background-color: $color-negro;
+        }
+        
+    }
+}
+
 
 /*
  * SERVICIOS
@@ -111,8 +163,34 @@
         width: 100%;
         background-color: $color-gris-claro;
         height: 160px;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        justify-content: center;
         @media (min-width: $sm) {
             height: 340px;
+        }
+        > img {
+            position: absolute;
+            display: block;
+            width: 120%;
+
+            @media (min-width: $xlg) {
+                width: 100%;
+            }
         }
     }
 

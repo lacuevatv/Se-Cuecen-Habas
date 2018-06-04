@@ -5,6 +5,7 @@
  * Since 3.0
  * CONFIG
 */
+
 //BD
 define('DB_SERVER', 'localhost');
 define('DB_USER', 'dbuser');

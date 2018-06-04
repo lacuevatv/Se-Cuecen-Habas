@@ -99,6 +99,14 @@ $( window ).on('load', function(){
         }
     });//load images
 
+    //carga imagenes cuya carga es por css (background)
+    function loadImagesBackgroundCSS ( contenedor, clase ) {
+        var html = '<div class="'+clase+'"></div>';
+        contenedor.prepend($(html));
+    }
+    //loadImagesBackgroundCSS ( $('#menu_criollo'), '.image-icon' ) ; 
+
+
     /*
      * IN VIEW ANIMATION
     */
@@ -445,7 +453,7 @@ $(window).on('load', function(){
 //CARGA SLIDER EN MÁS 18
 $(window).on('load', function(){
     
-    $('#owl-partners').owlCarousel({
+   /* $('#owl-partners').owlCarousel({
 	    loop:true,
         margin:10,
         slideSpeed : 2000,
@@ -458,32 +466,21 @@ $(window).on('load', function(){
 	            items:1
 	        },
 	    }
-    });//owl
+    });//owl*/
     
 
-    /*$('.owl-carousel').owlCarousel({
+    $('#slider_home').owlCarousel({
 	    loop:true,
 	    margin:10,
-	    nav:true,
+        nav:true,
+        doots: true,
 	    navText : ['<span class="icon-arrow icon-arrow-left"></span>','<span class="icon-arrow icon-arrow-right"></span>'],
 	    responsive:{
 	        0:{
 	            items:1
 	        },
-	        992:{
-	            items:3
-	        },
-	        1200:{
-	            items:5
-	        },
-	        1300:{
-	            items:6
-	        },
-	        1500:{
-	            items:8
-	        }
 	    }
-	});//owl*/
+	});//owl
 
 });//on load
 

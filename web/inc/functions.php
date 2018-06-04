@@ -278,7 +278,7 @@ function isAjax() {
 */
 
 function connectDB () {
-	global $connection;
+	
   $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
   // Test if connection succeeded
   if( mysqli_connect_errno() ) {
@@ -530,11 +530,16 @@ function getPostExtended ( $url, $postType ) {
  */
 
 //busca el slider en base de datos de acuerdo a su 'ubicacion' pasada
-function getSliders( $slider ) {
+function getSliders( $slider_ubicacion = null ) {
 
 	$connection = connectDB();
 	$tabla = 'sliders';
-	$query  = "SELECT * FROM " .$tabla. " WHERE slider_ubicacion='".$slider."' ORDER by slider_orden asc";
+	$query  = "SELECT * FROM " .$tabla;
+	if ( $slider_ubicacion != null ) {
+		$query  .= " WHERE slider_ubicacion='".$slider_ubicacion."'";
+	}
+	
+	$query  .=" ORDER by slider_orden asc";
 		
 	$result = mysqli_query($connection, $query);
 	
@@ -543,11 +548,10 @@ function getSliders( $slider ) {
 	} else {
 
 		while ( $row = $result->fetch_array(MYSQLI_ASSOC) ) {
-			$dataSlider[] = $row;
+			$sliders[] = $row;
 		}
 		
-		//selecciona el template html y le pasa la info
-		getTemplate( 'sliders', $dataSlider);
+		return $sliders;
 
 	}//else
 	closeDataBase( $connection );
