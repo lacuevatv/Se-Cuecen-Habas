@@ -5,8 +5,8 @@
 if ($data == 'criollo' ) : ?>
 
     <article class="servicio-item">
-        <figure>
-            
+        <figure class="load-images">
+            <img src="<?php echo UPLOADSURL; ?>/dos.jpg" style="display:block;width:100%;margin:0 auto;" alt="menu criollo">
         </figure>
 
         <h1 class="h1-criollo">
@@ -23,8 +23,8 @@ if ($data == 'criollo' ) : ?>
 <?php else : ?>
 
     <article class="servicio-item">
-        <figure>
-            
+        <figure class="load-images">
+            <img src="<?php echo UPLOADSURL; ?>/uno.jpg" style="display:block;width:100%;margin:0 auto;" alt="menu gourmet">
         </figure>
         <h1 class="h1-gourmet">
             <span class="sr-only">Gourmet</span>

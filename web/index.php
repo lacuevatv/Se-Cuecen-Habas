@@ -107,8 +107,8 @@ include 'header.php'; ?>
 
             </div><!--- //.container -->
 
-            <figure class="load-images" data-src="<?php echo UPLOADSURL; ?>/cocina-ref.jpg">
-            
+            <figure class="load-images">
+                <img data-src="<?php echo UPLOADSURL; ?>/cocina-ref.jpg">
             </figure>
 
             <div class="container">
@@ -159,7 +159,9 @@ include 'header.php'; ?>
             
             <div class="salones-wrapper">
                 
-                <div class="loading-salones">Cargando contenido.<span style="animation-delay: 500ms;">.</span><span style="animation-delay: 1000ms;">.</span></div>
+                <div class="loading-salones">
+                    Cargando contenido.<span style="animation-delay: 500ms;">.</span><span style="animation-delay: 1000ms;">.</span>
+                </div>
                 <?php //getTemplate( 'salones' ); ?>
             
             </div><!--- //.salones-wrapper -->

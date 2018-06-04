@@ -45,7 +45,10 @@ define('APIKEYGOOGLE', '' );
 
 global $categorias;
 $categorias = array(
-	array( 'slug' => 'slug', 'nombre' => 'Slug'),
+	array( 'slug' => 'criollo', 'nombre' => 'Menú Criollo'),
+	array( 'slug' => 'gourmet', 'nombre' => 'Menú Gourmet'),
+	array( 'slug' => 'salones', 'nombre' => 'Salones'),
+	array( 'slug' => 'comentarios', 'nombre' => 'Comentarios'),
 );
 
 define('POSTPERPAG', '5');//indica al paginador cuantos se muestran por pagina para calcular el offset además de que el loop muestra solo esos
