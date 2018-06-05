@@ -898,6 +898,13 @@ ul.dropdown-menu {
     width: 80%;
     margin: 0 auto; }
 
+.comentario-wrapper {
+  font-style: italic;
+  font-weight: bold; }
+
+.comentarios-titulo-resumen {
+  text-transform: uppercase; }
+
 /* ---- 7 seccion noticias ---- */
 .loop-noticias-backend {
   list-style: none;

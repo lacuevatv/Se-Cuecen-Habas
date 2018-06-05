@@ -32,14 +32,13 @@ $usertype = array(
 	array( 'status' => '1', 'nombre' => 'Editor'),
 	array( 'status' => 'a', 'nombre' => 'default'),
 );
-//variables de categorias de noticia
+//variables de categorias de noticia o posts
 global $categorias;//define las categorias para cargar noticias
 $categorias = array(
-	array( 'slug' => 'criollo', 'nombre' => 'Menú Criollo'),
-	array( 'slug' => 'gourmet', 'nombre' => 'Menú Gourmet'),
 	array( 'slug' => 'salones', 'nombre' => 'Salones'),
 	array( 'slug' => 'comentarios', 'nombre' => 'Comentarios'),
 );
+
 //variables de categorias de galeria de imagenes / si existen
 global $categoriasGalerias;//define las categorias para cargar galerias
 $categoriasGalerias = array(
