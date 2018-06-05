@@ -6,7 +6,7 @@
  * carga mas noticias
 */
 require '../functions.php';
-$noticiasPorPagina = 10;
+$noticiasPorPagina = 20;
 $connection = connectDB();
 $tabla = 'posts';
 $pageActual = isset( $_POST['page'] ) ? intval( $_POST['page'] ) : 2;
@@ -45,48 +45,53 @@ if ( $result->num_rows == 0 ) {
 		$dia          = date("d", strtotime($date));
 		$mes          = $meses[date("n", strtotime($date))-1];
 		$year         = date("Y", strtotime($date));
-	
-		?>
-		<li class="loop-noticias-backend-item">
+		
+		if ( $categoria == 'salones' ) : ?>
+			<li class="loop-noticias-backend-item">
 				<article class="row">
-				    <div class="col-30">
-				    	<?php 
-				    	if ( $imgDestacada != '' ) { ?>
-				    	<img src="<?php echo UPLOADSURLIMAGES.'/'.$imgDestacada; ?>" alt="Imagen Destacada de la noticia" class="img-responsive">
-				    	<?php }
-				    	else { ?>
-				    	<img src="assets/images/noticia-img-default.png" alt="Noticias-ATSA" class="img-responsive">
-				    	<?php } ?>
-				    </div>
-				    <div class="col-70">
-				    	
-				    	<h1 class="titulo-noticia-small">
-				    		<?php echo $titulo; ?> 
-				    		| 
-				    		<span><?php echo $status; ?></span>
-				    		- 
-				    		<small><?php echo $date; ?></small>
-				    	</h1>
-				    	<p class="links-edicion-noticias">
-				    		<a href="index.php?admin=editar-noticias&slug=<?php echo $url; ?>" title="Editar" class="btn-edit-news">
-					    		Editar Noticia
-					    	</a>
-					    	<?php 
-				    			if ( $status != 'publicado' ) {
-				    		?>
-				    		 | <a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] .'/noticias/'. $url ?>" target="_blank" title="Ver">Vista Previa</a>
-				    		 | <a href="<?php echo $url; ?>" class="btn-publish-post" title="Publicar">Publicar</a> 
-				    		 | <a href="<?php echo $url; ?>" class="btn-delete-post">Borrar</a>
-				    		<?php } else { ?>
-				    		 | <a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] .'/noticias/'. $url ?>" target="_blank" title="Ver">Ver noticia</a>
-				    		 | <a href="<?php echo $url; ?>" class="btn-delete-post">Borrar</a>
-				    		 <?php } ?>
-				    	</p>
-						
-				    </div>
+				<div class="col-30">
+					<?php 
+					if ( $imgDestacada != '' ) { ?>
+					<img src="<?php echo UPLOADSURLIMAGES.'/'.$imgDestacada; ?>" alt="Imagen Destacada de la noticia" class="img-responsive">
+					<?php }
+					else { ?>
+					<img src="assets/images/noticia-img-default.png" alt="Noticias" class="img-responsive">
+					<?php } ?>
+				</div>
+					<div class="col-70">
+						<h1 class="titulo-noticia-small">
+							<?php echo $titulo; ?>
+						</h1>
+						<p class="links-edicion-noticias">
+								<a href="index.php?admin=editar-salon&slug=<?php echo $row['post_ID']; ?>" title="Editar" class="btn-edit-news">
+									Editar salón
+								</a>
+								| <a href="<?php echo $row['post_ID']; ?>" class="btn-delete-post">Borrar</a>
+						</p>
+					</div>
 				</article>
 			</li>
-	<?php
+		<?php endif;
+		if ( $categoria == 'comentarios' ) : ?>
+			<li class="loop-noticias-backend-item">
+				<article class="row">
+					<div class="col-50">
+						<div class="comentario-wrapper"><?php echo $contenido; ?></div>
+					</div>
+					<div class="col-50">
+						<h1 class="titulo-noticia-small comentarios-titulo-resumen">
+							<?php echo $titulo; ?>
+						</h1>
+						<p class="links-edicion-noticias">
+								<a href="index.php?admin=editar-comentario&slug=<?php echo $row['post_ID']; ?>" title="Editar" class="btn-edit-news">
+									Editar comentario
+								</a>
+								| <a href="<?php echo $row['post_ID']; ?>" class="btn-delete-post">Borrar</a>
+						</p>
+					</div>
+				</article>
+			</li>
+		<?php endif;
 
 	}//FOREACH
 

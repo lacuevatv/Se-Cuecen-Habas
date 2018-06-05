@@ -5,9 +5,9 @@
       <!-- modulo -->
       <section>
         <div class="modulo-wrapper">
-          <h2>Noticias</h2>
-          <p>Administrar las noticias: Borrar, cargar y editar.</p>
-          <p><a class="btn btn-primary" href="index.php?admin=noticias" role="button">Ver lista de noticias</a></p>
+          <h2>Comentarios</h2>
+          <p>Administrar los comentarios: Borrar, cargar y editar.</p>
+          <p><a class="btn btn-primary" href="index.php?admin=comentarios" role="button">Ver lista de comentarios</a></p>
         </div>
       </section><!-- //modulo -->
     </div><!-- //columna -->
@@ -16,9 +16,9 @@
       <!-- modulo -->
       <section>
         <div class="modulo-wrapper">
-          <h2>Galería de Imágenes</h2>
-          <p>Manipular las distintas galerias de imagenes.</p>
-          <p><a class="btn btn-primary" href="index.php?admin=galeria-imagenes" role="button">Ir a la galeria</a></p>
+          <h2>Salones</h2>
+          <p>Administrar los salones: Borrar, cargar y editar.</p>
+          <p><a class="btn btn-primary" href="index.php?admin=salones" role="button">Ver lista de comentarios</a></p>
         </div>
       </section><!-- //modulo -->
     </div><!-- //columna -->
@@ -27,9 +27,9 @@
       <!-- modulo -->
       <section>
         <div class="modulo-wrapper">
-          <h2>Archivos descargas</h2>
-          <p>Administrar los archivos de descargas (pdfs).</p>
-          <p><a class="btn btn-primary" href="index.php?admin=archivos-descargas" role="button">Administrar Archivos</a></p>
+          <h2>Cargar menús</h2>
+          <p>Administrar los menús (pdfs).</p>
+          <p><a class="btn btn-primary" href="index.php?admin=archivos-descargas" role="button">Administrar menus</a></p>
         </div>
       </section><!-- //modulo -->
     </div><!-- //columna -->
@@ -40,7 +40,7 @@
         <div class="modulo-wrapper">
           <h2>Slider Inicio</h2>
           <p>Modificar los sliders actuales.</p>
-          <p><a class="btn btn-primary" href="index.php?admin=editar-slider&slug=home" role="button">Modificar sliders</a></p>
+          <p><a class="btn btn-primary" href="index.php?admin=editar-slider" role="button">Modificar sliders</a></p>
         </div>
       </section><!-- //modulo -->
     </div><!-- //columna -->

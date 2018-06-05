@@ -7,12 +7,12 @@ MANEJA LOS SUSCRIPTORES
 function getContacts () {
 	$connection = connectDB();
 	$tabla      = 'contacto';
-	$query      = "SELECT * FROM " .$tabla. " ORDER by fecha_de_envio desc ";
+	$query      = "SELECT * FROM " .$tabla. " ORDER by fecha_formulario desc ";
 	$result     = mysqli_query($connection, $query);
-	closeDataBase($connection);
+	
 
 	if ( $result->num_rows == 0 ) {
-		$contacts = 'none';
+		$contacts = null;
 
 	} else {
 		while ($row = $result->fetch_array()) {
@@ -21,4 +21,6 @@ function getContacts () {
 	}
 
 	return $contacts;
+
+	closeDataBase($connection);
 }

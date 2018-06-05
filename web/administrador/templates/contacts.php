@@ -26,37 +26,47 @@ load_module( 'contactos' );
 			  </button>
 			  
 			</div>
+			<?php if ($suscriptores != null ) : ?>
 			<table class="tabla-suscriptores" width="100%">
 				<thead>
 					<tr>
-						<td width="5%">
+						<td>
 							Id:
 						</td>
-						<td width="10%">
-							email:
-						</td>
-						<td width="10%">
+						<td>
 							Nombre:
 						</td>
-						<td width="10%">
-							Teléfono:
+						<td>
+							Empresa:
 						</td>
-						<td width="35%">
-							Mensaje
+						<td>
+							Salón:
 						</td>
-						<td width="5%">
-							Cargo
+						<td>
+							Ciudad
 						</td>
-						<td width="5%">
-							Fecha de viaje:
+						<td>
+							Teléfono
 						</td>
-                        <td width="5%">
-							Cantidad de Alumnos:
+						<td>
+							Email:
 						</td>
-                        <td width="5%">
-							Fecha de envío:
+                        <td>
+							Tipo de evento:
 						</td>
-						<td width="5%">
+                        <td>
+							Cantidad de Invitados:
+						</td>
+						<td>
+							Horario:
+						</td>
+						<td>
+							Mensaje:
+						</td>
+						<td>
+							F. Envío:
+						</td>
+						<td>
 							
 						</td>
 					</tr>
@@ -67,28 +77,37 @@ load_module( 'contactos' );
 						?>
 					<tr>
 						<td>
-							<?php echo $suscriptores[$i]['id']; ?>
+							<?php echo $suscriptores[$i]['contacto_id']; ?>
 						</td>
 						<td>
-							<?php echo $suscriptores[$i]['email']; ?>
+							<?php echo $suscriptores[$i]['contacto_nombre']; ?>
 						</td>
 						<td>
-							<?php echo utf8_decode($suscriptores[$i]['nombre']); ?>
+							<?php echo $suscriptores[$i]['contacto_empresa']; ?>
 						</td>
 						<td>
-                            <?php echo $suscriptores[$i]['telefono']; ?>
+							<?php echo $suscriptores[$i]['contacto_salon']; ?>
+						</td>
+						<td>
+							<?php echo $suscriptores[$i]['contacto_ciudad']; ?>
+						</td>
+						<td>
+							<?php echo $suscriptores[$i]['contacto_telefono']; ?>
+						</td>
+						<td>
+							<?php echo $suscriptores[$i]['contacto_email']; ?>
+						</td>
+						<td>
+							<?php echo $suscriptores[$i]['contacto_tipo_evento']; ?>
+						</td>
+						<td>
+							<?php echo $suscriptores[$i]['contacto_invitados']; ?>
+						</td>
+						<td>
+							<?php echo $suscriptores[$i]['contacto_horario']; ?>
 						</td>
 						<td class="font-reduce">
-                            <?php echo utf8_decode($suscriptores[$i]['mensaje']); ?>
-						</td>
-                        <td>
-                            <?php echo $suscriptores[$i]['cargo']; ?>
-						</td>
-                        <td>
-                            <?php echo $suscriptores[$i]['fecha_viaje']; ?>
-						</td>
-                        <td>
-                            <?php echo $suscriptores[$i]['cant_alumnos']; ?>
+                            <?php echo $suscriptores[$i]['contacto_mensaje']; ?>
 						</td>
 						<td>
 							<?php echo date('d.m.y' ,strtotime($suscriptores[$i]['fecha_de_envio']) ); ?>
@@ -104,6 +123,7 @@ load_module( 'contactos' );
 					?>
 				</tbody>
 			</table>
+			<?php endif; ?>
 		</div>
 
 		<form action="inc/export_excel.php" method="post" target="_blank" id="FormularioExportacion">

@@ -187,3 +187,92 @@ function searchPost ( $slug ) {
 	}
 		
 }//searchPost()
+
+/*
+* BUSCA LA NOTICIA POR EL SLUG Y DEVUELVE TODOS SUS PARAMETROS
+*/
+function searchPostID ( $id ) {
+	$connection = connectDB();
+	$tabla = 'posts';
+	//queries según parámetros
+	$query  = "SELECT * FROM " .$tabla. " WHERE post_ID='".$id."' LIMIT 1";	
+	$result = mysqli_query($connection, $query);
+	
+	if ( $result->num_rows == 0 ) {
+		echo 0;
+	} else {
+		$data = mysqli_fetch_array($result);
+
+		$postID       = $data['post_ID'];
+		$date         = $data['post_fecha'];
+		$meses        = array('Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre');
+		$dia          = date("d", strtotime($date));
+		$mes          = $meses[date("n", strtotime($date))-1];
+		$year         = date("Y", strtotime($date));
+		$resumen      = $data['post_resumen'];
+		$galeria      = $data['post_galeria'];
+ 		$imgGaleria   = array();
+
+		if ( $data['post_imagenesGal'] != '' ) {
+			$imgGaleria = unserialize( $data['post_imagenesGal'] );
+		}
+		
+
+		global $dataPost;
+		$dataPost = array(
+				'post_id'      => $data['post_ID'],
+				'titulo'       => $data['post_titulo'],
+				'url'          => $data['post_url'],
+				'imgDestacada' => $data['post_imagen'],
+				'resumen'      => $resumen,
+				'contenido'    => $data['post_contenido'],
+				'video'        => $data['post_video'],
+				'categoria'    => $data['post_categoria'],
+				'galeria'      => $data['post_galeria'],
+				'imgGaleria'   => $imgGaleria,
+				'fecha'        => $date,
+				'dia'          => $dia,
+				'mes'          => $mes,
+				'year'         => $year,	
+				'status'       => $data['post_status'],
+				'orden'        => $data['post_orden'],
+			);
+
+		closeDataBase($connection);
+
+		return $dataPost;
+	}
+		
+}//searchPost()
+
+function getPosts( $categoria= '', $number = -1, $offset = 0 ) {
+	$connection = connectDB();
+	$tabla = 'posts';
+
+	if ( $offset != '0' ) {
+		$number = $offset.','.$number;
+	}
+
+	$query  = "SELECT * FROM " .$tabla . " WHERE post_categoria='".$categoria."' ORDER by post_orden asc";
+	
+	if ( $number != -1 ) {
+		$query .= " LIMIT ".$number." ";
+	}
+	
+	$result = mysqli_query($connection, $query);
+	
+	closeDataBase( $connection );
+
+	if ( $result->num_rows == 0 ) {
+		$loop = null;
+	} else {
+
+		while ($row = $result->fetch_array()) {
+				$loop[] = $row;
+			}
+
+	}
+	
+	return $loop;
+}
+

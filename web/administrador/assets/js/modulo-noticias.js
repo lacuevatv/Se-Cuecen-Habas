@@ -81,7 +81,7 @@ function myFunctionNoticias(){
 	            type: 'POST',
 	            url: ajaxFunctionDir + '/delete-post.php',
 	            data: {
-	                post_url: postToDelete,
+	                post_url: postToDelete,//es el id
 	            },
 	            success: function ( response ) {
 	            	console.log(response);
@@ -234,7 +234,7 @@ $(document).ready(function(){
 			return;
 		}
 		//la url no puede estar vacía
-		if ( $('#post_url').val() == '' ) {
+		/*if ( $('#post_url').val() == '' ) {
 			error.append( '<li class="error-msj-list-item-danger">La URL no puede estar vacía</li>');
 			return;
 		} else {
@@ -242,7 +242,7 @@ $(document).ready(function(){
 			var urlTag = $('#post_url');
 			var newURL = getCleanedString(url);
 			urlTag.val(newURL);
-		}
+		}*/
 
 		//ver que boton se hace clic para cambiar el estado
 		var name = $(this).attr('name');

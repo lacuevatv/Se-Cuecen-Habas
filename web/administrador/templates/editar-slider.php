@@ -16,12 +16,13 @@ load_module( 'sliders' );
 //recupera slug a buscar
 global $slug;
 
-if ($slug != '') {
+
 	//busca en la base de datos los datos del slider
 	showSliderToEdit ( $slug );
 	//recupera los datos
 	global $dataSlider;
-}
+
+
 
 $item = 1;
 

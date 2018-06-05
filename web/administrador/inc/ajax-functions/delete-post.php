@@ -11,16 +11,8 @@ $connection     = connectDB();
 $tablaNoticias  = 'posts';
 $postUrl        = isset( $_POST['post_url'] ) ? $_POST['post_url'] : 'none';
 
-//buscamos id y etiquetas antes de borrar:
-$query          = "SELECT * FROM ".$tablaNoticias." WHERE post_url= '".$postUrl."'";
-$result         = mysqli_query($connection, $query);
-
-$row            = $result->fetch_array(MYSQLI_ASSOC);
-$postID         = $row['post_ID'];
-
-
 //borramos el post
-$query      = "DELETE FROM ".$tablaNoticias." WHERE post_url= '".$postUrl."'";
+$query      = "DELETE FROM ".$tablaNoticias." WHERE post_ID= '".$postUrl."'";
 $result     = mysqli_query($connection, $query);
    
    if ($result) {

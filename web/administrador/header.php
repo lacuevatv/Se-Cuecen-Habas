@@ -50,13 +50,13 @@ if(!defined("SECUREACCESS"))
               <a href="index.php?admin=contacts" role="button">Contactos</a>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Noticias<span class="caret"></span></a>
+              <a href="index.php?admin=comentarios" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Salones<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="index.php?admin=editar-noticias" role="button">Agregar nueva</a>
+                  <a href="index.php?admin=editar-salon" role="button">Agregar nuevo</a>
                   </li>
                 <li>
-                  <a href="index.php?admin=noticias" role="button">Ver todas</a>
+                  <a href="index.php?admin=salones" role="button">Ver salones</a>
                 </li>
               </ul>
             </li>
@@ -67,19 +67,19 @@ if(!defined("SECUREACCESS"))
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrar Página<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="index.php?admin=archivos-descargas" role="button">Archivos para descargar</a>
+                  <a href="index.php?admin=comentarios" role="button">Listar Comentarios</a>
                 </li>
                 <li>
-                  <a href="index.php?admin=info-adicional" role="button">Info Adicional</a>
+                  <a href="index.php?admin=editar-comentario" role="button">Agregar Comentario</a>
                 </li>
                 <li>
-                  <a href="index.php?admin=galeria-imagenes" role="button">Galerías de imágenes</a>
+                  <a href="index.php?admin=archivos-descargas" role="button">Menús</a>
                 </li>
                 <li>
                   <a href="index.php?admin=promociones" role="button">promociones</a>
                 </li>
                 <li>
-                  <a href="index.php?admin=editar-slider&slug=home" role="button">Slider Inicio</a>
+                  <a href="index.php?admin=editar-slider" role="button">Slider Inicio</a>
                 </li>
                 <li>
                   <a href="index.php?admin=biblioteca-medios" role="button">Medios</a>
