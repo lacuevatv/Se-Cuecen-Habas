@@ -28,6 +28,68 @@
                 <button id="toggle-criollo">
                     Ver Menú
                 </button>
+                
+                <div class="wrapper-menus-movil">
+                    <div class="menus-contenido">
+                        <?php 
+                        $menus1 = getMenus( 'criollo', 'sociales' );
+                        $menus2 = getMenus( 'criollo', 'corporativo' );
+                        
+                        if ( $menus1 != null ) : ?>
+                        <div class="menu-contenido">
+                            <h3>Sociales<br>
+                                <small>Menú</small>
+                            </h3>
+                            <ul class="menus-data" data-menu-nombre="criollo" data-menu-subcategoria="sociales">
+                                
+                                <?php 
+                                for ($i=0; $i < count($menus1); $i++) { 
+                                    $linkMenu = UPLOADSFILE . '/' . $menus1[$i]['docs_url'];
+                                    if ( $menus1[$i]['docs_type'] == 'url' ) {
+                                        $linkMenu = $menus1[$i]['docs_url'];
+                                    }
+                                    ?>
+                                    <li>
+                                        <a href="<?php echo $linkMenu; ?>" target="_blank">
+                                            <div>
+                                                <?php lastTextToItalic( '_', $menus1[$i]['docs_texto']); ?>
+                                            </div>
+                                            <span>Descargar pdf</span>
+                                        </a>
+                                    </li>
+                                <?php } ?>
+                            </ul>
+                        </div>
+                        <?php endif; 
+
+                        if ( $menus2 != null ) : ?>
+                        <div class="menu-contenido">
+                            <h3>Corporativo<br>
+                                <small>Menú</small>
+                            </h3>
+                            <ul class="menus-data" data-menu-nombre="criollo" data-menu-subcategoria="corporativo">
+                                
+                                <?php 
+                                for ($i=0; $i < count($menus2); $i++) { 
+                                    $linkMenu = UPLOADSFILE . '/' . $menus2[$i]['docs_url'];
+                                    if ( $menus2[$i]['docs_type'] == 'url' ) {
+                                        $linkMenu = $menus2[$i]['docs_url'];
+                                    }
+                                    ?>
+                                    <li>
+                                        <a href="<?php echo $linkMenu; ?>" target="_blank">
+                                            <div>
+                                                <?php lastTextToItalic( '_', $menus2[$i]['docs_texto']); ?>
+                                            </div>
+                                            <span>Descargar pdf</span>
+                                        </a>
+                                    </li>
+                                <?php } ?>
+                            </ul>
+                        </div><!--//.menu-contenido-->
+                        <?php endif; ?>
+                    </div><!--//.menus-contenido-->
+                </div>
             </article>
         </li><!--- //servicio Item:criollo -->
     
@@ -46,6 +108,70 @@
                 <button id="toggle-gourmet">
                     Ver Menú
                 </button>
+
+                <div class="wrapper-menus-movil">
+
+                    <div class="menus-contenido">
+                        
+                    <?php 
+                        $menus1 = getMenus( 'gourmet', 'sociales' );
+                        $menus2 = getMenus( 'gourmet', 'corporativo' );
+                        
+                        if ( $menus1 != null ) : ?>
+                        <div class="menu-contenido">
+                            <h3>Sociales<br>
+                                <small>Menú</small>
+                            </h3>
+                            <ul class="menus-data" data-menu-nombre="gourmet" data-menu-subcategoria="sociales">
+                                
+                                <?php 
+                                for ($i=0; $i < count($menus1); $i++) { 
+                                    $linkMenu = UPLOADSFILE . '/' . $menus1[$i]['docs_url'];
+                                    if ( $menus1[$i]['docs_type'] == 'url' ) {
+                                        $linkMenu = $menus1[$i]['docs_url'];
+                                    }
+                                    ?>
+                                    <li>
+                                        <a href="<?php echo $linkMenu; ?>" target="_blank">
+                                            <div>
+                                                <?php lastTextToItalic( '_', $menus1[$i]['docs_texto']); ?>
+                                            </div>
+                                            <span>Descargar pdf</span>
+                                        </a>
+                                    </li>
+                                <?php } ?>
+                            </ul>
+                        </div>
+                        <?php endif; 
+
+                        if ( $menus2 != null ) : ?>
+                        <div class="menu-contenido">
+                            <h3>Corporativo<br>
+                                <small>Menú</small>
+                            </h3>
+                            <ul class="menus-data" data-menu-nombre="gourmet" data-menu-subcategoria="corporativo">
+                                
+                                <?php 
+                                for ($i=0; $i < count($menus2); $i++) { 
+                                    $linkMenu = UPLOADSFILE . '/' . $menus2[$i]['docs_url'];
+                                    if ( $menus2[$i]['docs_type'] == 'url' ) {
+                                        $linkMenu = $menus2[$i]['docs_url'];
+                                    }
+                                    ?>
+                                    <li>
+                                        <a href="<?php echo $linkMenu; ?>" target="_blank">
+                                            <div>
+                                                <?php lastTextToItalic( '_', $menus2[$i]['docs_texto']); ?>
+                                            </div>
+                                            <span>Descargar pdf</span>
+                                        </a>
+                                    </li>
+                                <?php } ?>
+                            </ul>
+                        </div>
+                        <?php endif; ?>
+                    </div><!--//.menus-contenido-->
+                </div><!--//.wrapper-menus-movi-->
             </article>
         </li><!--- //servicio Item:gourmet -->
     
@@ -59,68 +185,9 @@
             <span class="sr-only">Criollo</span>    
         </h2>
 
-        <div class="menus-contenido">
-            
-        <?php 
-            $menus1 = getMenus( 'criollo', 'sociales' );
-            $menus2 = getMenus( 'criollo', 'corporativo' );
-            
-            if ( $menus1 != null ) : ?>
-            <div class="menu-contenido">
-                <h3>Sociales<br>
-                    <small>Menú</small>
-                </h3>
-                <ul class="menus-data" data-menu-nombre="criollo" data-menu-subcategoria="sociales">
-                    
-                    <?php 
-                    for ($i=0; $i < count($menus1); $i++) { 
-                        $linkMenu = UPLOADSFILE . '/' . $menus1[$i]['docs_url'];
-                        if ( $menus1[$i]['docs_type'] == 'url' ) {
-                            $linkMenu = $menus1[$i]['docs_url'];
-                        }
-                        ?>
-                        <li>
-                            <a href="<?php echo $linkMenu; ?>" target="_blank">
-                                <div>
-                                    <?php lastTextToItalic( '_', $menus1[$i]['docs_texto']); ?>
-                                </div>
-                                <span>Descargar pdf</span>
-                            </a>
-                        </li>
-                    <?php } ?>
-                </ul>
-            </div>
-            <?php endif; 
-
-            if ( $menus2 != null ) : ?>
-            <div class="menu-contenido">
-                <h3>Corporativo<br>
-                    <small>Menú</small>
-                </h3>
-                <ul class="menus-data" data-menu-nombre="criollo" data-menu-subcategoria="corporativo">
-                    
-                    <?php 
-                    for ($i=0; $i < count($menus2); $i++) { 
-                        $linkMenu = UPLOADSFILE . '/' . $menus2[$i]['docs_url'];
-                        if ( $menus2[$i]['docs_type'] == 'url' ) {
-                            $linkMenu = $menus2[$i]['docs_url'];
-                        }
-                        ?>
-                        <li>
-                            <a href="<?php echo $linkMenu; ?>" target="_blank">
-                                <div>
-                                    <?php lastTextToItalic( '_', $menus2[$i]['docs_texto']); ?>
-                                </div>
-                                <span>Descargar pdf</span>
-                            </a>
-                        </li>
-                    <?php } ?>
-                </ul>
-            </div>
-            <?php endif; ?>
-        </div>
+        
     </div><!--- //.container -->
-</div>
+</div><!--//.wrapper-menus-->
 
 <div id="menus-gourmet" class="wrapper-menus">
     <div class="container">
@@ -128,68 +195,9 @@
             <span class="sr-only">Gourmet</span>
         </h2>
 
-        <div class="menus-contenido">
-            
-        <?php 
-            $menus1 = getMenus( 'gourmet', 'sociales' );
-            $menus2 = getMenus( 'gourmet', 'corporativo' );
-            
-            if ( $menus1 != null ) : ?>
-            <div class="menu-contenido">
-                <h3>Sociales<br>
-                    <small>Menú</small>
-                </h3>
-                <ul class="menus-data" data-menu-nombre="gourmet" data-menu-subcategoria="sociales">
-                    
-                    <?php 
-                    for ($i=0; $i < count($menus1); $i++) { 
-                        $linkMenu = UPLOADSFILE . '/' . $menus1[$i]['docs_url'];
-                        if ( $menus1[$i]['docs_type'] == 'url' ) {
-                            $linkMenu = $menus1[$i]['docs_url'];
-                        }
-                        ?>
-                        <li>
-                            <a href="<?php echo $linkMenu; ?>" target="_blank">
-                                <div>
-                                    <?php lastTextToItalic( '_', $menus1[$i]['docs_texto']); ?>
-                                </div>
-                                <span>Descargar pdf</span>
-                            </a>
-                        </li>
-                    <?php } ?>
-                </ul>
-            </div>
-            <?php endif; 
-
-            if ( $menus2 != null ) : ?>
-            <div class="menu-contenido">
-                <h3>Corporativo<br>
-                    <small>Menú</small>
-                </h3>
-                <ul class="menus-data" data-menu-nombre="gourmet" data-menu-subcategoria="corporativo">
-                    
-                    <?php 
-                    for ($i=0; $i < count($menus2); $i++) { 
-                        $linkMenu = UPLOADSFILE . '/' . $menus2[$i]['docs_url'];
-                        if ( $menus2[$i]['docs_type'] == 'url' ) {
-                            $linkMenu = $menus2[$i]['docs_url'];
-                        }
-                        ?>
-                        <li>
-                            <a href="<?php echo $linkMenu; ?>" target="_blank">
-                                <div>
-                                    <?php lastTextToItalic( '_', $menus2[$i]['docs_texto']); ?>
-                                </div>
-                                <span>Descargar pdf</span>
-                            </a>
-                        </li>
-                    <?php } ?>
-                </ul>
-            </div>
-            <?php endif; ?>
-        </div>
+        
     </div><!--- //.container -->
-</div>
+</div><!--//.wrapper-menus-->
 
 <div class="btn-wrapper-center">
     <button class="btn-ver-imagenes">

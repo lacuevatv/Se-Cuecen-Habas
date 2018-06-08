@@ -1383,17 +1383,17 @@ html, body {
 /*
  * SUBMENUS, AL HACER CLIC EN LOS BOTONES
 */
-.wrapper-menus {
+.wrapper-menus, .wrapper-menus-movil {
+  height: 0;
   overflow: hidden;
   position: relative;
-  background: #fff;
-  border-bottom: 1px solid #f4f4f4; }
-  .wrapper-menus h2 {
+  background: #fff; }
+  .wrapper-menus h2, .wrapper-menus-movil h2 {
     margin-top: 50px;
     text-align: center;
     font-family: "Flama", sans-serif;
     font-size: 150%; }
-  .wrapper-menus h2.criollo:before {
+  .wrapper-menus h2.criollo:before, .wrapper-menus-movil h2.criollo:before {
     content: '';
     height: 114px;
     width: 79px;
@@ -1407,7 +1407,7 @@ html, body {
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%); }
-  .wrapper-menus h2.gourmet:before {
+  .wrapper-menus h2.gourmet:before, .wrapper-menus-movil h2.gourmet:before {
     content: '';
     height: 114px;
     width: 79px;
@@ -1421,10 +1421,10 @@ html, body {
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%); }
-  .wrapper-menus .menus-contenido {
+  .wrapper-menus .menus-contenido, .wrapper-menus-movil .menus-contenido {
     margin-bottom: 70px; }
     @media (min-width: 992px) {
-      .wrapper-menus .menus-contenido {
+      .wrapper-menus .menus-contenido, .wrapper-menus-movil .menus-contenido {
         display: flex;
         display: -o-flex;
         display: -ms-flex;
@@ -1435,12 +1435,13 @@ html, body {
         -ms-justify-content: center;
         -o-justify-content: center;
         justify-content: center; } }
-    .wrapper-menus .menus-contenido > div {
-      padding: 0 30px; }
-      @media (min-width: 992px) {
-        .wrapper-menus .menus-contenido > div {
-          width: 50%; } }
-    .wrapper-menus .menus-contenido h3 {
+    @media (min-width: 767px) {
+      .wrapper-menus .menus-contenido .menu-contenido, .wrapper-menus-movil .menus-contenido .menu-contenido {
+        padding: 0 30px; } }
+    @media (min-width: 992px) {
+      .wrapper-menus .menus-contenido .menu-contenido, .wrapper-menus-movil .menus-contenido .menu-contenido {
+        width: 50%; } }
+    .wrapper-menus .menus-contenido h3, .wrapper-menus-movil .menus-contenido h3 {
       text-align: center;
       font-size: 180%;
       line-height: 100%;
@@ -1448,18 +1449,22 @@ html, body {
       margin-bottom: 40px;
       font-weight: 600; }
       @media (min-width: 567px) {
-        .wrapper-menus .menus-contenido h3 {
+        .wrapper-menus .menus-contenido h3, .wrapper-menus-movil .menus-contenido h3 {
           font-size: 200%;
           line-height: 100%; } }
-      .wrapper-menus .menus-contenido h3 small {
+      .wrapper-menus .menus-contenido h3 small, .wrapper-menus-movil .menus-contenido h3 small {
         font-family: "Flama", sans-serif;
         text-transform: uppercase;
         text-align: center;
         font-size: 40%;
         font-weight: 400; }
 
+@media (min-width: 992px) {
+  .wrapper-menus {
+    border-bottom: 1px solid #f4f4f4; } }
+
 .menus-data li {
-  padding: 5px 10px;
+  padding: 5px 10px !important;
   border-bottom: 1px solid #2b292a; }
   .menus-data li a {
     position: relative;

@@ -313,12 +313,11 @@
 /*
  * SUBMENUS, AL HACER CLIC EN LOS BOTONES
 */
-.wrapper-menus {
-    //height: 0;
+.wrapper-menus, .wrapper-menus-movil {
+    height: 0;
     overflow: hidden;
     position: relative;
     background: $color-blanco;
-    border-bottom: 1px solid $color-gris-claro;
 
     h2{
         margin-top: 50px;
@@ -373,8 +372,10 @@
             justify-content: center;
         }
 
-        > div {
-            padding: 0 30px;
+        .menu-contenido {
+            @media (min-width: $sm) {
+                padding: 0 30px;
+            }
             @media (min-width: $md) {
                 width: 50%;
             }
@@ -403,9 +404,15 @@
     }
 }
 
+.wrapper-menus {
+    @media (min-width: $md) {
+        border-bottom: 1px solid $color-gris-claro;
+    }
+}
+
 .menus-data {
     li {
-        padding: 5px 10px;
+        padding: 5px 10px!important;
         border-bottom: 1px solid $color-negro;
         
         a {
@@ -439,7 +446,7 @@
             em {
                 font-style: italic;
             }
-            
+
             > span {
                 display: none;
                 @media (min-width: $xs) {
