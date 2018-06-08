@@ -1170,13 +1170,56 @@ html, body {
     @media (min-width: 1500px) {
       .wrapper-slider .sliders li {
         height: 688px; } }
+    .wrapper-slider .sliders li h2 {
+      text-align: center;
+      font-weight: 700;
+      font-size: 200%;
+      line-height: 150%;
+      margin-bottom: 20px;
+      color: #fff;
+      -webkit-text-shadow: 1px 1px 10px #333;
+      -moz-text-shadow: 1px 1px 10px #333;
+      -ms-text-shadow: 1px 1px 10px #333;
+      text-shadow: 1px 1px 10px #333; }
+      @media (min-width: 992px) {
+        .wrapper-slider .sliders li h2 {
+          margin-bottom: 40px;
+          font-size: 250%;
+          line-height: 150%; } }
+    .wrapper-slider .sliders li p {
+      text-align: center;
+      font-size: 100%;
+      line-height: 110%;
+      padding: 0 5%;
+      color: #fff;
+      -webkit-text-shadow: 1px 1px 1px #333;
+      -moz-text-shadow: 1px 1px 1px #333;
+      -ms-text-shadow: 1px 1px 1px #333;
+      text-shadow: 1px 1px 1px #333; }
+      @media (min-width: 992px) {
+        .wrapper-slider .sliders li p {
+          font-size: 120%;
+          line-height: 120%;
+          padding: 0 10%; } }
+    .wrapper-slider .sliders li a {
+      color: #fff;
+      margin: 20px auto;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: "Flama", sans-serif;
+      display: block;
+      -webkit-text-shadow: 1px 1px 1px #333;
+      -moz-text-shadow: 1px 1px 1px #333;
+      -ms-text-shadow: 1px 1px 1px #333;
+      text-shadow: 1px 1px 1px #333; }
   .wrapper-slider .sliders .image-background {
     height: 100%;
     width: 100%;
     background: #f4f4f4;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover; }
+    background-size: cover;
+    padding: 8% 5% 5%; }
   .wrapper-slider .sliders .owl-dots {
     position: absolute;
     bottom: 5%;
@@ -1200,6 +1243,10 @@ html, body {
     border-radius: 50%; }
   .wrapper-slider .sliders .active {
     background-color: #2b292a; }
+  .wrapper-slider .sliders .owl-prev {
+    left: 2%; }
+  .wrapper-slider .sliders .owl-next {
+    right: 2%; }
 
 /*
  * SERVICIOS
