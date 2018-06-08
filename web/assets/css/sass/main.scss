@@ -115,6 +115,10 @@
             background-position: center;
             background-size: cover;
             padding: 8% 5% 5%;
+
+            @media (min-width: $xlg) {
+                padding: 11% 5% 5%;
+            }
         }
 
         .owl-dots {
@@ -156,7 +160,7 @@
     background-color: $color-gris-semi-claro;
     
     .lista-servicios {
-        margin-bottom: 40px;
+        //margin-bottom: 40px;
         @media (min-width: $md) {
             display: flex;
             display: -o-flex;
@@ -168,7 +172,7 @@
             -ms-justify-content: space-between;
             -o-justify-content: space-between;
             justify-content: space-between;
-            margin-bottom: 70px;
+            //margin-bottom: 70px;
         }
 
         li {
@@ -193,6 +197,10 @@
             font-style: italic;
             font-weight: 600;
             font-size: 120%;
+            margin-top: 40px;
+            @media (min-width: $md) {
+                margin-top: 70px;
+            }
             &:after {
                 content: '';
                 position: absolute;
@@ -299,7 +307,152 @@
         padding: 7px 25px 5px;
         font-weight: 600;
     }
+    
 }//.servicio-item
+
+/*
+ * SUBMENUS, AL HACER CLIC EN LOS BOTONES
+*/
+.wrapper-menus {
+    //height: 0;
+    overflow: hidden;
+    position: relative;
+    background: $color-blanco;
+    border-bottom: 1px solid $color-gris-claro;
+
+    h2{
+        margin-top: 50px;
+        text-align: center;
+        font-family: $fuente-secundaria;
+        font-size: 150%;
+    }
+
+    h2.criollo {
+        &:before {
+            content: '';
+            height: 114px;
+            width: 79px;
+            background: url('../images/criollo@2x.png') no-repeat;
+            background-size: contain;
+            background-position: center;
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            @include transform(translateX(-50%));
+        } 
+    }
+
+    h2.gourmet {
+        &:before {
+            content: '';
+            height: 114px;
+            width: 79px;
+            background: url('../images/gourmet@2x.png') no-repeat;
+            background-size: contain;
+            background-position: center;
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            @include transform(translateX(-50%));
+        } 
+    }
+
+
+    .menus-contenido {
+        margin-bottom: 70px;
+        @media (min-width: $md) {
+            display: flex;
+            display: -o-flex;
+            display: -ms-flex;
+            display: -moz-flex;
+            display: -webkit-flex;
+            -webkit-justify-content: center;
+            -moz-justify-content: center;
+            -ms-justify-content: center;
+            -o-justify-content: center;
+            justify-content: center;
+        }
+
+        > div {
+            padding: 0 30px;
+            @media (min-width: $md) {
+                width: 50%;
+            }
+        }
+
+        h3 {
+            
+            text-align: center;
+            font-size: 180%;
+            line-height: 100%;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            font-weight: 600;
+            @media (min-width: $xs) {
+                font-size: 200%;
+                line-height: 100%;
+            }
+            small {
+                font-family: $fuente-secundaria;
+                text-transform: uppercase;
+                text-align: center;
+                font-size: 40%;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.menus-data {
+    li {
+        padding: 5px 10px;
+        border-bottom: 1px solid $color-negro;
+        
+        a {
+            position: relative;
+            padding-right: 20px;
+            display: flex;
+            display: -o-flex;
+            display: -ms-flex;
+            display: -moz-flex;
+            display: -webkit-flex;
+            -webkit-justify-content: space-between;
+            -moz-justify-content: space-between;
+            -ms-justify-content: space-between;
+            -o-justify-content: space-between;
+            justify-content: space-between;
+            
+            &:after {
+                content: '';
+                display: block;
+                height: 12px;
+                width: 12px;
+                background: url('../images/sprite.png') no-repeat;
+                background-size: 150px 60px;
+                background-position: -89px -20px;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                @include transform(translateY(-50%));
+            }
+
+            em {
+                font-style: italic;
+            }
+            
+            > span {
+                display: none;
+                @media (min-width: $xs) {
+                    display: block;
+                    font-family: $fuente-secundaria;
+                    text-transform: uppercase;
+                    font-size: 80%;
+                }
+            }
+        }
+    }
+}
+
 
 /*
  * POR QUE ELEGIRNOS

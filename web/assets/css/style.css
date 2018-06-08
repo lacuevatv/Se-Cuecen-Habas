@@ -1220,6 +1220,9 @@ html, body {
     background-position: center;
     background-size: cover;
     padding: 8% 5% 5%; }
+    @media (min-width: 1500px) {
+      .wrapper-slider .sliders .image-background {
+        padding: 11% 5% 5%; } }
   .wrapper-slider .sliders .owl-dots {
     position: absolute;
     bottom: 5%;
@@ -1253,29 +1256,26 @@ html, body {
 */
 #servicios {
   background-color: #f8f8f8; }
-  #servicios .lista-servicios {
-    margin-bottom: 40px; }
+  @media (min-width: 992px) {
+    #servicios .lista-servicios {
+      display: flex;
+      display: -o-flex;
+      display: -ms-flex;
+      display: -moz-flex;
+      display: -webkit-flex;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      -ms-justify-content: space-between;
+      -o-justify-content: space-between;
+      justify-content: space-between; } }
+  #servicios .lista-servicios li {
+    background-color: #fff;
+    padding: 25px;
+    margin: 20px auto; }
     @media (min-width: 992px) {
-      #servicios .lista-servicios {
-        display: flex;
-        display: -o-flex;
-        display: -ms-flex;
-        display: -moz-flex;
-        display: -webkit-flex;
-        -webkit-justify-content: space-between;
-        -moz-justify-content: space-between;
-        -ms-justify-content: space-between;
-        -o-justify-content: space-between;
-        justify-content: space-between;
-        margin-bottom: 70px; } }
-    #servicios .lista-servicios li {
-      background-color: #fff;
-      padding: 25px;
-      margin: 20px auto; }
-      @media (min-width: 992px) {
-        #servicios .lista-servicios li {
-          margin: 10px;
-          width: 50%; } }
+      #servicios .lista-servicios li {
+        margin: 10px;
+        width: 50%; } }
   #servicios .btn-wrapper-center {
     display: block;
     width: 100%;
@@ -1285,7 +1285,11 @@ html, body {
       position: relative;
       font-style: italic;
       font-weight: 600;
-      font-size: 120%; }
+      font-size: 120%;
+      margin-top: 40px; }
+      @media (min-width: 992px) {
+        #servicios .btn-wrapper-center button {
+          margin-top: 70px; } }
       #servicios .btn-wrapper-center button:after {
         content: '';
         position: absolute;
@@ -1375,6 +1379,126 @@ html, body {
   border: 1px solid #2b292a;
   padding: 7px 25px 5px;
   font-weight: 600; }
+
+/*
+ * SUBMENUS, AL HACER CLIC EN LOS BOTONES
+*/
+.wrapper-menus {
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+  border-bottom: 1px solid #f4f4f4; }
+  .wrapper-menus h2 {
+    margin-top: 50px;
+    text-align: center;
+    font-family: "Flama", sans-serif;
+    font-size: 150%; }
+  .wrapper-menus h2.criollo:before {
+    content: '';
+    height: 114px;
+    width: 79px;
+    background: url("../images/criollo@2x.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%); }
+  .wrapper-menus h2.gourmet:before {
+    content: '';
+    height: 114px;
+    width: 79px;
+    background: url("../images/gourmet@2x.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%); }
+  .wrapper-menus .menus-contenido {
+    margin-bottom: 70px; }
+    @media (min-width: 992px) {
+      .wrapper-menus .menus-contenido {
+        display: flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        justify-content: center; } }
+    .wrapper-menus .menus-contenido > div {
+      padding: 0 30px; }
+      @media (min-width: 992px) {
+        .wrapper-menus .menus-contenido > div {
+          width: 50%; } }
+    .wrapper-menus .menus-contenido h3 {
+      text-align: center;
+      font-size: 180%;
+      line-height: 100%;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      font-weight: 600; }
+      @media (min-width: 567px) {
+        .wrapper-menus .menus-contenido h3 {
+          font-size: 200%;
+          line-height: 100%; } }
+      .wrapper-menus .menus-contenido h3 small {
+        font-family: "Flama", sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 40%;
+        font-weight: 400; }
+
+.menus-data li {
+  padding: 5px 10px;
+  border-bottom: 1px solid #2b292a; }
+  .menus-data li a {
+    position: relative;
+    padding-right: 20px;
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between; }
+    .menus-data li a:after {
+      content: '';
+      display: block;
+      height: 12px;
+      width: 12px;
+      background: url("../images/sprite.png") no-repeat;
+      background-size: 150px 60px;
+      background-position: -89px -20px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
+    .menus-data li a em {
+      font-style: italic; }
+    .menus-data li a > span {
+      display: none; }
+      @media (min-width: 567px) {
+        .menus-data li a > span {
+          display: block;
+          font-family: "Flama", sans-serif;
+          text-transform: uppercase;
+          font-size: 80%; } }
 
 /*
  * POR QUE ELEGIRNOS

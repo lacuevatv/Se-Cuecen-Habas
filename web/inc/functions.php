@@ -270,6 +270,17 @@ function isAjax() {
     return (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH']  == 'XMLHttpRequest');
 }
 
+//esta funcion explota el string recibido para agregarle italic a la segunda parte
+function lastTextToItalic( $separador, $string ) {
+	 $miarray = explode($separador, $string );
+	 if ( count($miarray) > 1 ) {
+		echo $miarray[0] . ' <em>' . $miarray[1] . '</em>';
+	 } else {
+		echo $string;
+	 }
+	 
+}
+
 
 /*
  *
@@ -630,4 +641,26 @@ function getUrlPromo() {
 	}
 
 	closeDataBase($connection);
+}
+
+//busca los pdfs de los distintos menus
+function getMenus( $menu, $subcategoria ) {
+	$connection = connectDB();
+	$tabla = 'docs';
+	$query  = "SELECT * FROM ".$tabla. " WHERE post_type='link' AND docs_seccion='".$menu."' AND docs_subsection='".$subcategoria."' ORDER by docs_orden asc";
+		
+	$result = mysqli_query($connection, $query);
+	
+	if ( $result->num_rows == 0 ) {
+		return null;
+	} else {
+
+		while ( $row = $result->fetch_array(MYSQLI_ASSOC) ) {
+			$menus[] = $row;
+		}
+		
+		return $menus;
+
+	}//else
+	closeDataBase( $connection );
 }

@@ -46,36 +46,9 @@ include 'header.php'; ?>
 
         <!--- section-servicios -->
         <section id="servicios" class="section-wrapper">
-            <div class="container">
-                <hgroup class="padding-interno">
-                    <h2 class="title-section">
-                        Servicios
-                    </h2>
-                    <h3 class="subtitle-section">
-                        Criollo <em>&</em> Gourmet
-                    </h3>
-                </hgroup>
-                <!--- servicios:criollo y gourmet -->
-                
-                <ul class="padding-interno lista-servicios">
-
-                <!--- servicio Item:criollo -->
-                    <li>
-                        <?php getTemplate( 'servicio', 'criollo' ); ?>    
-                    </li><!--- //servicio Item:criollo -->
-                
-                    <!--- servicio Item:gourmet -->
-                    <li>
-                        <?php getTemplate( 'servicio', 'gourmet' ); ?>    
-                    </li><!--- //servicio Item:gourmet -->
-                
-                </ul><!--- //servicios:criollo y gourmet -->
-                
-                <div class="btn-wrapper-center">
-                    <button>Ver imágenes</button>
-                </div>
-
-            </div><!--- //.container -->
+            
+            <?php getTemplate('servicio'); ?>
+            
         </section><!--- //.section-servicios -->
 
         <!--- section-elegirnos -->
