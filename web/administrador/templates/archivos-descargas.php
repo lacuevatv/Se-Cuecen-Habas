@@ -1,39 +1,39 @@
 <?php
-load_module( 'medios' );
-load_module( 'otros-opciones' );
+/*
+ * editar slider
+ * Edita el slider seleccionado o crea uno nuevo
+ * Since 3.0
+ * 
+*/
+require_once("inc/functions.php");
+load_module( 'archivos' );
 ?>
+
 <div class="contenido-modulo">
-	<h1 class="titulo-modulo">
-		Menus para descargar
-	</h1>
 	<div class="container">
 
-		<div class="row">
-            <div class="col-30">
-                <h2>
-                    Menú Criollo
-                </h2>
+		<h2>Documentación</h2>
+		<p><small>Administrar documentación subida por secciones.</small></p>
+			
+		<div id="accordion-docs">
 
-                <ul class="otras-opciones" data-id="criollo">
+				<?php showLinksdocsAdmin(); ?>
 
-                </ul>
-            </div>
-
-             <div class="col-30">
-                <h2>
-                    Menú Gourmet
-                </h2>
-
-                <ul class="otras-opciones" data-id="criollo">
-                    
-                </ul>
-            </div>
-        </div>
+		</div><!-- // accordion -->
 	
-		</div><!-- //row -->
+	
+		<button class="btn btn-primary" id="new-section-docs-btn">Crear nueva sección</button>
+	
+		<p class="new-section-docs-btn-text"><small>
+			Este botón agrega una sección nueva para la página, primero pide un id que lo identificará en la base de datos y luego un texto que es el que aparece en la página.
+		</small></p>	
+			
+		
 	</div><!-- // container -->
 </div><!-- // wrapper interno modulo -->
-<div id="dialog"></div>
+<div id="dialog">
+	
+</div>
 <!-- botones del modulo -->
 <footer class="footer-modulo container">
     <a type="button" href="index.php" class="btn">Volver al inicio</a>

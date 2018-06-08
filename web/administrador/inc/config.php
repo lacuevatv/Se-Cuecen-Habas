@@ -58,6 +58,17 @@ $categoriasArchivos = array(
 	)),
 );
 
+//variables de subsecciones de documentacion
+global $subsection;
+$subsection = array(
+	'criollo'    => array(
+		'sociales', 'corporativo',
+	),
+	'gourmet'   => array(
+		'sociales', 'corporativo',
+	),
+);
+
 //variable de info adicional, por ejemplo, redes sociales, teléfonos y emails
 global $infoAdicional;
 $infoAdicional = array(

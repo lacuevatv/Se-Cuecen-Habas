@@ -78,6 +78,7 @@ function get_footer_scripts ($modulo) { ?>
 		case 'info-adicional': ?>
 			<script src="<?php echo URLADMINISTRADOR; ?>/assets/js/modulo-medios.js"></script>
 			<script src="<?php echo URLADMINISTRADOR; ?>/assets/js/modulo-otros-opciones.js"></script>
+			<script src="<?php echo URLADMINISTRADOR; ?>/assets/js/modulo-archivos.js"></script>
 			<?php break;
 
 		case 'sliders' :

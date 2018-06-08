@@ -23,3 +23,56 @@
   font-style: italic;
   margin-right: 10px;
 }
+
+#accordion-docs {
+	margin: 50px 0;
+}
+
+.docs-section-title {
+	font-size: 200%;
+	line-height:120%; 
+	margin: 20px 0 0;
+	text-transform: uppercase;
+	small {
+		font-size: 50%;
+		font-style: italic;
+		cursor: pointer;
+		text-transform: lowercase;
+	}
+}
+
+.links-docs {
+	margin: 20px 0;
+
+	li {
+		margin: 20px 0;
+		border-bottom: 1px solid $gris;
+		min-height: 100px;
+	}
+}
+
+.new-section-docs-btn-text {
+	margin-bottom: 50px;
+}
+
+.link-docs-wrapper {
+	input {
+		height: 25px;
+	}
+	select {
+		background: $danger;
+		border: none;
+		color: $blanco;
+		height: 25px;
+		margin-top: 20px;
+	}
+	
+	.link-docs-file {
+		margin-top: 20px;
+	}
+}
+
+.btn-load-file-docs, .btn-del-file-docs {
+  cursor: pointer;
+  text-decoration: underline;
+}

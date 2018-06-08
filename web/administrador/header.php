@@ -50,7 +50,7 @@ if(!defined("SECUREACCESS"))
               <a href="index.php?admin=contacts" role="button">Contactos</a>
             </li>
             <li class="dropdown">
-              <a href="index.php?admin=comentarios" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Salones<span class="caret"></span></a>
+              <a href="index.php?admin=salones" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Salones<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li>
                   <a href="index.php?admin=editar-salon" role="button">Agregar nuevo</a>
