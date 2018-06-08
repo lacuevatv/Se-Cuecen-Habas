@@ -82,6 +82,9 @@ if(!defined("SECUREACCESS"))
                   <a href="index.php?admin=editar-slider" role="button">Slider Inicio</a>
                 </li>
                 <li>
+                  <a href="index.php?admin=galeria-imagenes" role="button">Galería de imágenes</a>
+                </li>
+                <li>
                   <a href="index.php?admin=biblioteca-medios" role="button">Medios</a>
                 </li>
               </ul>

@@ -23,6 +23,10 @@ load_module( 'otros-opciones' );
                 <h2>
                     Menú Gourmet
                 </h2>
+
+                <ul class="otras-opciones" data-id="criollo">
+                    
+                </ul>
             </div>
         </div>
 	
