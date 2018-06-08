@@ -25,7 +25,7 @@
                 <p>
                     Nuestros asados están hechos por Expertos asadores muy lentamente al rescoldo del fogón. Disfruta de la Calidad de la Tradicional carne Argentina con nuestra selección de Novillitos Aberdeen Angus criados en los mejores campos de la Región Pampeana.
                 </p>
-                <button id="toggle-criollo">
+                <button class="btn-toggle-menu" data-href="menu-criollo">
                     Ver Menú
                 </button>
                 
@@ -105,7 +105,7 @@
                 <p>
                     Disfruta de la más variada selección de Sabores Gourmet, con productos elegidos y obtenidos de los lugares donde mejor expresan su calidad. Cada Bocado o Plato es tratado por nuestros Expertos Chefs con el cuidado y experiencia que se merecen.
                 </p>
-                <button id="toggle-gourmet">
+                <button class="btn-toggle-menu" data-href="menu-gourmet">
                     Ver Menú
                 </button>
 
@@ -179,7 +179,8 @@
 
 </div><!--- //.container -->
 
-<div id="menus-criollo" class="wrapper-menus">
+<div id="menu-criollo" class="wrapper-menus">
+    <span class="close-menu"></span>
     <div class="container">
         <h2 class="criollo">
             <span class="sr-only">Criollo</span>    
@@ -189,7 +190,8 @@
     </div><!--- //.container -->
 </div><!--//.wrapper-menus-->
 
-<div id="menus-gourmet" class="wrapper-menus">
+<div id="menu-gourmet" class="wrapper-menus">
+    <span class="close-menu"></span>
     <div class="container">
         <h2 class="gourmet">
             <span class="sr-only">Gourmet</span>
@@ -198,6 +200,7 @@
         
     </div><!--- //.container -->
 </div><!--//.wrapper-menus-->
+
 
 <div class="btn-wrapper-center">
     <button class="btn-ver-imagenes">

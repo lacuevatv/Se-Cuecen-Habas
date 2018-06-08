@@ -5,12 +5,11 @@
  * @ver 1.0
  --------------------------------------------------------------
 >>> TABLE OF CONTENTS:
-1.0 A) ON READY
-B ) ON LOAD (requieren que todo este cargado)
+1.0 A) ON READY: Scroll top, toggle menu movil, toggle menuses criollo y gourmet
+B ) ON LOAD (requieren que todo este cargado): Carga asincrona de imágenes, animaciones
 2.0 FORMULARIOS
 3.0 POP UP PROMO
 3.0 OWL SLIDERS
-4.0 TWITTER
 --------------------------------------------------------------*/
 
 var baseUrl = 'http://' + window.location.host;
@@ -75,6 +74,60 @@ $(document).ready(function(){
         }
        
    }
+
+   /*
+    * MENU CRIOLLO Y GOURMET
+   */
+    $(document).on('click', '.btn-toggle-menu', function (e) {
+        e.preventDefault();
+        //buscar menu items
+        var article = $(this).closest('article');
+        var menus = $(article).find('.menus-contenido');
+        
+        //si es movil
+        if (window.innerWidth < 992 ) {
+            var contenedor = $(article).find('.wrapper-menus-movil');  
+            var h = contenedor.prop('scrollHeight');
+            if ( contenedor.height() == 0 ) {
+                contenedor.animate({
+                    'height': h+'px',
+                }, 500);
+            } else {
+                contenedor.animate({
+                    'height': 0,
+                }, 500);
+            }
+
+        } else {
+            //si es pc
+            var href = '#'+$(this).attr('data-href');
+            var wrapper = $(href);//este es el que hay que hacer crecer la altura
+            var hrefcontenedor = '#'+$(this).attr('data-href') + ' .container';//pero aca hay que incluir el menu
+            var contenedor = $(hrefcontenedor);
+            contenedor.find('.menus-contenido').remove();
+            contenedor.append( $(menus.clone() ));
+            //debugger;
+            var h = wrapper.prop('scrollHeight');
+            if ( wrapper.height() == 0 ) {
+                wrapper.animate({
+                    'height': h+'px',
+                }, 500);
+            } else {
+                wrapper.animate({
+                    'height': 0,
+                }, 500);
+                
+            }
+        }
+    });
+
+    //close menus
+    $(document).on('click', '.close-menu', function () {
+        var menu = $(this).closest('.wrapper-menus');
+        menu.animate({
+            'height': 0,
+        }, 500);
+    });
 
 
 });//.ready()
@@ -485,7 +538,7 @@ $(window).on('load', function(){
                 $(contenedorRecomendaciones).find('.loading-salones').fadeOut();
             },
             success: function ( response ) {
-                console.log(response);
+                //console.log(response);
             
                 //insertar la imagen
                 $(contenedorRecomendaciones).css('background-image', 'url(contenido/cuatro.jpg)');
