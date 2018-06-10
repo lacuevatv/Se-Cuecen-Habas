@@ -18,7 +18,7 @@
         <div class="modulo-wrapper">
           <h2>Salones</h2>
           <p>Administrar los salones: Borrar, cargar y editar.</p>
-          <p><a class="btn btn-primary" href="index.php?admin=salones" role="button">Ver lista de comentarios</a></p>
+          <p><a class="btn btn-primary" href="index.php?admin=salones" role="button">Ver lista de salones</a></p>
         </div>
       </section><!-- //modulo -->
     </div><!-- //columna -->

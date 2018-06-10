@@ -1749,6 +1749,8 @@ html, body {
         @media (min-width: 767px) {
           .salones-wrapper .salon .data-wrapper h5 {
             font-size: 100%; } }
+    .salones-wrapper .salon .salon-more-info-data {
+      display: none; }
   .salones-wrapper .wrapper-pagination {
     padding: 20px; }
     .salones-wrapper .wrapper-pagination .pagination {
