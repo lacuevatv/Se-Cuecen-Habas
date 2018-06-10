@@ -49,6 +49,29 @@ if( isAjax() ) {
 			}
 			
 		break;
+
+		case 'salones' :
+			
+			$salones = getPosts( 'salones', POSTPERPAG );
+			if ( $salones != null ) {
+				getTemplate( 'salones', $salones );
+			}
+			
+		break;
+
+		case 'paginationLoop' :
+			
+			$page  = isset($_POST['page']) ? $_POST['page'] : 1;
+			$postPerPage  = isset($_POST['postPerPage']) ? $_POST['postPerPage'] : '1';
+			$categoria = isset($_POST['categoria']) ? $_POST['categoria'] : 'salones';
+
+			$offset = ($page-1) * $postPerPage;
+
+			$loop = getPosts( $categoria, $postPerPage, $exclude = 'none', $status = 'publicado', $offset );
+			//print_r($loop);
+			getTemplate( 'loop-salones', $loop );
+
+		break;
 		
 	}//switch
 

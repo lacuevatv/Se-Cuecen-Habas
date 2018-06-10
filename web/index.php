@@ -135,11 +135,10 @@ include 'header.php'; ?>
             
             <div class="salones-wrapper">
                 
-                <div class="loading-salones">
+                <div id="loading-salones" class="loading-salones">
                     Cargando contenido.<span style="animation-delay: 500ms;">.</span><span style="animation-delay: 1000ms;">.</span>
                 </div>
-                <?php //getTemplate( 'salones' ); ?>
-            
+                
             </div><!--- //.salones-wrapper -->
 
         </section><!--- //.section-salones -->

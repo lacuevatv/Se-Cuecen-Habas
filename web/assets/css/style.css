@@ -1615,9 +1615,140 @@ html, body {
     text-align: center;
     font-style: italic;
     padding: 40px;
-    font-size: 90%; }
+    font-size: 90%;
+    overflow: hidden; }
     .salones-wrapper .loading-salones > span {
       animation: blinking 500ms infinite; }
+  .salones-wrapper .salones {
+    overflow: hidden;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s; }
+    .salones-wrapper .salones .pages-salones {
+      display: flex;
+      display: -o-flex;
+      display: -ms-flex;
+      display: -moz-flex;
+      display: -webkit-flex;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      -o-align-items: center;
+      align-items: center;
+      -webkit-justify-content: flex-start;
+      -moz-justify-content: flex-start;
+      -ms-justify-content: flex-start;
+      -o-justify-content: flex-start;
+      justify-content: flex-start;
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      -o-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      transition: all 0.5s; }
+    .salones-wrapper .salones li {
+      cursor: pointer;
+      width: 50%;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      transition: all 0.5s; }
+      @media (min-width: 767px) {
+        .salones-wrapper .salones li {
+          width: 25%; } }
+      @media (min-width: 992px) {
+        .salones-wrapper .salones li:hover .data-wrapper {
+          zoom: 1;
+          filter: alpha(opacity=100);
+          opacity: 1; } }
+  .salones-wrapper .salon {
+    height: 180px;
+    width: 100%;
+    background: #2b292a no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s; }
+    @media (min-width: 767px) {
+      .salones-wrapper .salon {
+        height: 200px; } }
+    @media (min-width: 992px) {
+      .salones-wrapper .salon {
+        height: 250px; } }
+    @media (min-width: 1200px) {
+      .salones-wrapper .salon {
+        height: 300px; } }
+    @media (min-width: 1500px) {
+      .salones-wrapper .salon {
+        height: 450px; } }
+    .salones-wrapper .salon .data-wrapper {
+      background-color: rgba(10, 10, 10, 0.5);
+      padding: 5%;
+      height: 100%;
+      color: #fff;
+      display: flex;
+      display: -o-flex;
+      display: -ms-flex;
+      display: -moz-flex;
+      display: -webkit-flex;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      -o-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      -o-justify-content: center;
+      justify-content: center;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      -o-flex-direction: column;
+      flex-direction: column;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      transition: all 0.5s; }
+      @media (min-width: 992px) {
+        .salones-wrapper .salon .data-wrapper {
+          zoom: 1;
+          filter: alpha(opacity=0);
+          opacity: 0; } }
+      .salones-wrapper .salon .data-wrapper h1 {
+        font-family: "Flama", sans-serif;
+        font-size: 80%;
+        line-height: 100%;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        margin-bottom: 5%;
+        text-align: center; }
+        @media (min-width: 767px) {
+          .salones-wrapper .salon .data-wrapper h1 {
+            font-size: 100%;
+            line-height: 120%; } }
+      .salones-wrapper .salon .data-wrapper p {
+        margin-bottom: 5%;
+        font-size: 80%;
+        letter-spacing: .05em;
+        text-align: center;
+        line-height: 110%; }
+      .salones-wrapper .salon .data-wrapper h5 {
+        font-style: italic;
+        text-align: center;
+        font-size: 80%;
+        line-height: 100%; }
+        @media (min-width: 767px) {
+          .salones-wrapper .salon .data-wrapper h5 {
+            font-size: 100%; } }
   .salones-wrapper .wrapper-pagination {
     padding: 20px; }
     .salones-wrapper .wrapper-pagination .pagination {

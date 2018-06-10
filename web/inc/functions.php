@@ -452,6 +452,7 @@ function getPagination( $categoria, $postPerPage ) {
 	$posts = getPosts( $categoria );
 	$totalPost = count($posts);
 	$cantPages = ceil($totalPost / $postPerPage);//devuelve valor redondeado 
+	$pageActual = 1;
 
 	if ( $cantPages < 2 || $posts == null ) {
 		return;
@@ -461,6 +462,7 @@ function getPagination( $categoria, $postPerPage ) {
 		'numberPages' => $cantPages,
 		'categoria'   => $categoria,
 		'postPerPage' => $postPerPage,
+		'pageActual' => $pageActual,
 	);
 
 	getTemplate( 'pagination' ,$data );

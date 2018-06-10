@@ -106,7 +106,6 @@ $(document).ready(function(){
             var contenedor = $(hrefcontenedor);
             contenedor.find('.menus-contenido').remove();
             contenedor.append( $(menus.clone() ));
-            //debugger;
             var h = wrapper.prop('scrollHeight');
             if ( wrapper.height() == 0 ) {
                 wrapper.animate({
@@ -128,6 +127,66 @@ $(document).ready(function(){
             'height': 0,
         }, 500);
     });
+
+    /*
+    * pagination
+    */
+   /*var pages = $('.page-click-btn');
+    //variable para saber cuantas paginas son
+    var numberPages = pages.length;
+    //la cantidad de paginas que puede mostrar el diseño
+    var pageHtml = 8;
+    //sabe que cantidad de paginas están fuera de la vista
+    outViewPages = numberPages-pageHtml;
+    //contenedor de las paginas
+    contenedor = $('.posts-content');
+    //cantidad de numeros por paginas
+    postPerPage = $('.pagination-items').attr('data-post-per-page');
+    //categoria cargada
+    categoria = $('.main-title-page').attr('data-categoria');
+    */
+
+    //clic en los numeros de paginas
+    $(document).on('click', '.page-click-btn', function( event ){
+        event.preventDefault();
+        var actualPage = $('.active').attr('href');
+        var postPerPage = $('.pagination').attr('data-post-per-page');
+        var contenedor = $('.salones');
+        var categoria = 'salones';
+        page = $(this).attr('href');
+        id = '#page'+page;
+
+        $.ajax( {
+            type: 'POST',
+            url: ajaxFileUrl,
+            data: {
+                function: 'paginationLoop',
+                page: page,
+                postPerPage: postPerPage,
+                categoria: 'salones',
+            },
+            //funcion antes de enviar
+            beforeSend: function() {
+            },
+            success: function ( response ) {
+                console.log(response)
+                var newPage = $( '<div id="page'+page+'" class="pages-salones">' + response + '</div>' );
+                contenedor.append(newPage);
+            },
+            error: function ( ) {
+                console.log('error');
+            },
+    });//cierre ajax
+            
+
+        //además quitamos a todos la clase activate
+        $('.active').each(function(){
+            $(this).removeClass('active');
+        });
+        //y le asignamos la clase activate al elemento clickeado
+        $(this).addClass('active');
+        
+    });//.click .page.click-btn
 
 
 });//.ready()
@@ -161,7 +220,43 @@ $( window ).on('load', function(){
 
 
     /*
+     * CARGA EL TEMPLATE DE LOS SALONES
+    */
+    (function () {
+        var wrapper = $('.salones-wrapper');
+        var templateRef = $('#loading-salones');
+        //ajax de sliders
+        $.ajax( {
+            type: 'POST',
+            url: ajaxFileUrl,
+            data: {
+                function: 'salones',
+            },
+            success: function ( response ) {
+               //console.log(response);
+               if (response) {
+                    //borrar el templateLoading
+                    $(templateRef).animate({
+                        'height': 0,
+                        'padding' :0,
+                    }, 500, function(){
+                        //luego de animar, se borra
+                        $(templateRef).hide();
+                        //y se agrega la respuesta
+                        $(wrapper).append(response);
+                    });
+               }
+            },
+            error: function ( ) {
+                console.log('error');
+            },
+        });//cierre ajax
+    })(); 
+
+
+    /*
      * IN VIEW ANIMATION
+     * function que agrega la calse in-view cuando el elemento esta en la pantalla y así animarlo
     */
     var $animation_elements = $('.animate-element');
     var $window = $(window);
