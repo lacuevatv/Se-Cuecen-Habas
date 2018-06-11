@@ -255,43 +255,94 @@ $(document).ready(function(){
         }, 500);
     });//click close data salon
 
+
+
+
+
     /*
      * VER IMAGENES
     */
     $(document).on('click', '.btn-ver-imagenes', function (){
         var btn = this;
         var contenedor = $('.wrapper-images');
-        var galeria = $('#galeria-imagenes-menu li img');
 
-        galeria.each(function(){
-
-            if ( ! $(this).attr('src') ) {
-                $(this).attr('src', $(this).attr('data-src') );
-            } 
-
-        });//load images
-
-        if ( ! $(galeria).hasClass('owl-loaded') ) {
-
-            owlCarouselStartAutoHeigh('#galeria-imagenes-menu');
-
-        }
-        
-        var h = $('#galeria-imagenes-menu').prop('scrollHeight');
-        //mostramos imagenes:
-        if ( $(contenedor).height() == 0 ) {
-            $(contenedor).animate({
-                'height': h +'px',
-            }, 500);
-            $(btn).text('Ocultar imágenes');
-        } else {
-            $(contenedor).animate({
-                'height': 0,
-            }, 500);
+        if ( $(btn).attr('data-open') == 'true' ) {
+            //el contenedor esta abierto, hay que cerrarlo y salir
+            $(btn).attr('data-open', 'false');
             $(btn).text('Ver imágenes');
+            $(contenedor).animate({
+                'height': 0 +'px',
+            }, 500);
+            return true;
+        } else {
+            //el contenedor no está abierto, se ejecuta toda la funcion:
+
+            //1. se agrega la indicacion de que ahora esta abierto
+            $(btn).attr('data-open', 'true');
+
+            //2.ahora hay que ver si hay imagenes o no:
+            var galeria = $('#galeria-imagenes-menu li img');
+            cantImagenes = galeria.length;
+            cuenta = 1;
+            if ( cantImagenes == 0  ) {
+                //si no hay imagenes
+                $(contenedor).animate({
+                    'height': 100 +'px',
+                }, 500); 
+                     
+            } else {
+
+                //3. indicar al usuario que se esta cargando
+                $(btn).text('Cargando imágenes...');
+
+                //4 carga las imagenes de a una y las cuenta
+                galeria.each(function(){
+
+                    //si no estan cargadas:
+                    if ( ! $(this).attr('src') ) {
+                        $(this).attr('src', $(this).attr('data-src') );
+
+                        this.onload = function () {
+                            console.log(cuenta)
+                            cuenta++;
+    
+                            if ( cuenta == cantImagenes ) {
+                                //cuando llega al final de todas las imagenes recien continua:
+                                //5. activa el owl-carousel sino esta ya activado
+                                if ( ! $(galeria).hasClass('owl-loaded') ) {
+                                    owlCarouselStartAutoHeigh('#galeria-imagenes-menu');
+                                }
+    
+                                //6. muestra las imagenes
+                                var h = $('#galeria-imagenes-menu').prop('scrollHeight');
+                                $(contenedor).animate({
+                                    'height': h +'px',
+                                }, 500);
+                                $(btn).text('Ocultar imágenes');
+                            }  
+                        }
+
+                    } else {
+                        //si ya estaban cargadas lo unico que se hace es abrir el contendedor para mostrarlas
+                        var h = $('#galeria-imagenes-menu').prop('scrollHeight');
+                        $(contenedor).animate({
+                            'height': h +'px',
+                        }, 500);
+                        $(btn).text('Ocultar imágenes');
+                    }
+
+                    
+                });//each load images
+            }
+            
+
+
         }
-        
+  
     });//clic en ver imagenes
+
+
+        
     
 
 });//.ready()

@@ -203,7 +203,7 @@
 
 
 <div class="btn-wrapper-center">
-    <button class="btn-ver-imagenes">
+    <button class="btn-ver-imagenes" data-open="false">
         Ver imágenes
     </button>
     <div class="wrapper-images">
@@ -229,7 +229,7 @@
         </ul>
 
         <?php else : ?>
-            <p>No hay nada cargado</p>
+            <p style="margin-top:50px">No hay nada cargado</p>
         <?php endif; ?>
         </div>
     </div>
