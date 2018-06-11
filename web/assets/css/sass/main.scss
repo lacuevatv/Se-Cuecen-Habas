@@ -471,6 +471,31 @@
 }
 
 /*
+ * galeria de imagenes
+*/
+.wrapper-images {
+    height: 0;
+    overflow: hidden;
+}
+
+.slider-galeria-imagenes {//ul
+    max-height: 500px;
+    margin: 40px 0;
+
+    li {
+        width: 100%;
+
+        > img {
+            display: block;
+            margin: 0 auto;
+            max-width: 95%;
+            width: auto!important;
+        }
+    }
+}//.slider-galeria-imagenes
+
+
+/*
  * POR QUE ELEGIRNOS
 */
 #elegirnos {

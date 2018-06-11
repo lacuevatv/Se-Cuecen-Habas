@@ -42,9 +42,7 @@ $categorias = array(
 //variables de categorias de galeria de imagenes / si existen
 global $categoriasGalerias;//define las categorias para cargar galerias
 $categoriasGalerias = array(
-	array( 'slug' => 'criollo', 'nombre' => 'Menú Criollo'),
-	array( 'slug' => 'gourmet', 'nombre' => 'Menú Gourmet'),
-	array( 'slug' => 'salones', 'nombre' => 'Salones'),
+	array( 'slug' => 'menus', 'nombre' => 'Galería Debajo del Menú'),
 );
 
 //variables de categorias de galeria de archivos //normalmente pdf para descargar

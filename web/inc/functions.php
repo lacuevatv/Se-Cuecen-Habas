@@ -666,3 +666,25 @@ function getMenus( $menu, $subcategoria ) {
 	}//else
 	closeDataBase( $connection );
 }
+
+//toma las imagenes para armar la galería de imagenes
+function getImagesGalery( $post_type ) {
+	$connection = connectDB();
+	$tabla      = 'medios';
+	$query      = "SELECT * FROM " .$tabla. " WHERE medio_tipo='imagen' AND medio_post_type= '" .$post_type. "' ORDER by medio_orden asc";
+	$result     = mysqli_query($connection, $query);
+
+	if ( $result->num_rows == 0 ) {
+	  
+	  return null;
+
+	} else {
+		while ($row = $result->fetch_array()) {
+			$images[] = $row;
+		}
+		
+		return $images;
+	}
+
+	closeDataBase($connection);
+}

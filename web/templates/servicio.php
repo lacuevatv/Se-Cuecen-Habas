@@ -206,4 +206,31 @@
     <button class="btn-ver-imagenes">
         Ver imágenes
     </button>
+    <div class="wrapper-images">
+        <div class="container">
+
+    <?php 
+    $galeriaImagenes = getImagesGalery('menus');
+    
+    if ( $galeriaImagenes != null ) :
+    ?>
+        <ul id="galeria-imagenes-menu" class="slider-galeria-imagenes owl-carousel">
+                                
+        <?php
+        foreach ($galeriaImagenes as $imagen ) { ?>
+        
+            <li>
+                <img data-src="<?php echo UPLOADSURL.'/'.$imagen['medio_nombre']; ?>">
+            </li>
+            
+        <?php } //foreach
+        ?>
+                                
+        </ul>
+
+        <?php else : ?>
+            <p>No hay nada cargado</p>
+        <?php endif; ?>
+        </div>
+    </div>
 </div>

@@ -1520,6 +1520,24 @@ html, body {
   background-position: -117px -42px; }
 
 /*
+ * galeria de imagenes
+*/
+.wrapper-images {
+  height: 0;
+  overflow: hidden; }
+
+.slider-galeria-imagenes {
+  max-height: 500px;
+  margin: 40px 0; }
+  .slider-galeria-imagenes li {
+    width: 100%; }
+    .slider-galeria-imagenes li > img {
+      display: block;
+      margin: 0 auto;
+      max-width: 95%;
+      width: auto !important; }
+
+/*
  * POR QUE ELEGIRNOS
 */
 @media (min-width: 992px) {

@@ -200,7 +200,7 @@ $(document).ready(function(){
             /*
             * CARGA DE IMAGENES
             */
-            //1. busca que hay que carar
+            //1. busca que hay que cargar
             var imagenes = $(dataGaleria).find('img');
             
             imagenes.each(function(){
@@ -255,6 +255,44 @@ $(document).ready(function(){
         }, 500);
     });//click close data salon
 
+    /*
+     * VER IMAGENES
+    */
+    $(document).on('click', '.btn-ver-imagenes', function (){
+        var btn = this;
+        var contenedor = $('.wrapper-images');
+        var galeria = $('#galeria-imagenes-menu li img');
+
+        galeria.each(function(){
+
+            if ( ! $(this).attr('src') ) {
+                $(this).attr('src', $(this).attr('data-src') );
+            } 
+
+        });//load images
+
+        if ( ! $(galeria).hasClass('owl-loaded') ) {
+
+            owlCarouselStartAutoHeigh('#galeria-imagenes-menu');
+
+        }
+        
+        var h = $('#galeria-imagenes-menu').prop('scrollHeight');
+        //mostramos imagenes:
+        if ( $(contenedor).height() == 0 ) {
+            $(contenedor).animate({
+                'height': h +'px',
+            }, 500);
+            $(btn).text('Ocultar imágenes');
+        } else {
+            $(contenedor).animate({
+                'height': 0,
+            }, 500);
+            $(btn).text('Ver imágenes');
+        }
+        
+    });//clic en ver imagenes
+    
 
 });//.ready()
 
@@ -735,6 +773,22 @@ function owlCarouselStart (item) {
         loop:true,
         margin:10,
         nav:true,
+        doots: true,
+        navText : ['<span class="icon-arrow icon-arrow-left"></span>','<span class="icon-arrow icon-arrow-right"></span>'],
+        responsive:{
+            0:{
+                items:1
+            },
+        }
+    }); 
+}
+
+function owlCarouselStartAutoHeigh (item) {
+    $(item).owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        autoHeight: true,
         doots: true,
         navText : ['<span class="icon-arrow icon-arrow-left"></span>','<span class="icon-arrow icon-arrow-right"></span>'],
         responsive:{
