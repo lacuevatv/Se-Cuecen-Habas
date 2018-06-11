@@ -137,10 +137,9 @@ include 'header.php'; ?>
                 
                 <div id="loading-salones" class="loading-salones">
                     Cargando contenido.<span style="animation-delay: 500ms;">.</span><span style="animation-delay: 1000ms;">.</span>
-                </div>
-                
+                </div>                
             </div><!--- //.salones-wrapper -->
-
+            <div id="salonespopup" class="salones-popup"></div>
         </section><!--- //.section-salones -->
 
         <!--- section-clientes -->

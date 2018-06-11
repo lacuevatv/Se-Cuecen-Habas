@@ -69,7 +69,7 @@
 
             h2 {
                 text-align: center;
-                font-weight: 700;
+                font-weight: 600;
                 font-size: 200%;
                 line-height: 150%;
                 margin-bottom: 20px;
@@ -591,9 +591,14 @@
 /*
  * SALONES
 */
-.salones-wrapper {
-    background-color: $color-gris-claro;
+#salones {
+    position: relative;
+}
 
+.salones-wrapper {
+    background-color: $color-gris-semi-claro;
+    height: 0;
+    overflow: hidden;
     .loading-salones {
         display: block;
         text-align: center;
@@ -609,7 +614,7 @@
 
     .salones {//ul
         //height: 0;
-        overflow: hidden;
+        //overflow: hidden;
         @include transition(all $transitionSpeed);
         .pages-salones {
             display: flex;
@@ -636,6 +641,7 @@
         }//.pages-salones
         
         li {
+            position: relative;
             cursor: pointer;
             width: 50%;
             @include transition(all $transitionSpeed);
@@ -743,7 +749,8 @@
             }
         }
 
-        .salon-more-info-data {
+        .extra-data {
+            //contiene la info extra a clonar
             display: none;
         }
     }//.salon
@@ -785,13 +792,153 @@
                 }
             }
             .active {
-                font-weight: 700;
+                font-weight: 600;
             }
 
             
         }//.pagination
     }//.wrapper-pagination
 }//.salones-wrapper
+
+//popup salon on click
+.salones-popup {
+    position: relative;
+    overflow: hidden;
+    height: 0;
+
+    .salon-more-info-data  {
+        height: 100%;
+    }
+
+    .close-data-salon {
+        position: absolute;
+        top: 40px;
+        left: 20px;
+        display: block;
+        height: 20px;
+        width: 20px;
+        background: url('../images/sprite.png') no-repeat;
+        background-size: 150px 60px;
+        background-position: -117px -42px;
+        cursor: pointer;
+        z-index: 11111;
+        &:hover {
+            zoom: 1;
+            filter: alpha(opacity=50);
+            opacity: 0.5;
+        }
+
+        @media (min-width: $xlg) {
+            top: 100px;
+            left: 30px;
+        }
+    }
+}//.salones-popup
+
+.salon-more-info-data {
+    padding-top: 20px;
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    background: $color-gris-semi-claro;
+    z-index: 11;
+    
+    @media (min-width: $md) {
+        -webkit-flex-direction: row;
+        -moz-flex-direction: row;
+        -ms-flex-direction: row;
+        -o-flex-direction: row;
+        flex-direction: row;
+    }
+
+    .salon-contenido {
+        padding: 20px 25px 20px 60px;
+        width: 100%;
+
+        @media (min-width: $md) {
+            width: 30%;
+            font-size: 90%;
+        }
+
+        @media (min-width: $xlg) {
+            padding-top: 80px;
+            padding-left: 80px;
+        }
+
+        h1 {
+            font-size: 170%;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            margin-bottom: 5px;
+            font-family: $fuente-secundaria;
+            text-transform: uppercase;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+        strong {
+            font-weight: 600;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        li {
+            list-style: circle;
+        }
+    }//.salon-contenido
+    
+    .salon-galeria {
+        width: 100%;
+        height: 100%;
+
+        @media (min-width: $md) {
+            width: 70%;
+        }
+
+        figure {
+            height: 100%;
+            width: 100%;
+        }
+        img  {
+            width: 100%;
+        }
+    }//.salon-galeria
+
+    .slider-salones {
+        width: 100%;
+
+        li {
+            width: 100%;
+        }
+        .owl-prev {
+            left: 2%;
+        }
+        .owl-next {
+            right: 2%;
+        }
+    }
+
+}//.salon-more-info-data
 
 /*
  * CLIENTES
@@ -855,11 +1002,11 @@
             }
             em {
                 font-style: italic;
-                font-weight: 700;
+                font-weight: 600;
             }
 
             strong {
-                font-weight: 700;
+                font-weight: 600;
             }
 
             .name {

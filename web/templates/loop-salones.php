@@ -25,53 +25,59 @@
                     Ver info
                 </h5>
             </div>
-            <div class="salon-more-info-data">
-                <div>
-                    <?php  if ( ! $data[$i]['post_titulo'] == '' ) : ?>
-                    <h1>
-                        <?php echo $data[$i]['post_titulo']; ?>
-                    </h1>
-                    <?php  endif; ?>
+           
+            <div class="extra-data">
+                <div class="salon-more-info-data">
+                    <div class="salon-contenido">
+                        <?php  if ( ! $data[$i]['post_titulo'] == '' ) : ?>
+                        <h1>
+                            <?php echo $data[$i]['post_titulo']; ?>
+                        </h1>
+                        <?php  endif; ?>
 
-                    <?php  if ( ! $data[$i]['post_contenido'] == '' ) : ?>
-                    <p>
-                        <?php echo $data[$i]['post_contenido']; ?>
-                    </p>
+                        <?php  if ( ! $data[$i]['post_contenido'] == '' ) : ?>
+                        <p>
+                            <?php echo $data[$i]['post_contenido']; ?>
+                        </p>
+                        
+                        <?php  endif; ?>
+                    </div>
                     
-                    <?php  endif; ?>
-                </div>
-                <div>
                     <?php  if ( $data[$i]['post_galeria'] == 0 ) : ?>
-                    <figure>
-                        <img data-src="<?php echo UPLOADSURL.'/'.$data[$i]['post_imagen']; ?>">
-                    </figure>
+                    <div class="salon-galeria" data-galeria-activate="false">
+                        <figure>
+                            <img data-src="<?php echo UPLOADSURL.'/'.$data[$i]['post_imagen']; ?>">
+                        </figure>
                     <?php else :
                         $imagenes = unserialize($data[$i]['post_imagenesGal']);
                         
                         if ( ! empty($imagenes) ) { ?>
-                            <ul>
-                            
-                            <?php
-                            foreach ($imagenes as $imagen ) { ?>
-                                <li>
-                                    <img data-src="<?php echo UPLOADSURL.'/'.$imagen; ?>">
-                                </li>
-                            
-                        <?php } //foreach
-                            ?>
-                            </ul>    
+                        <div class="salon-galeria" data-galeria-activate="true">
+                            <ul class="slider-salones owl-carousel">
+                                
+                                <?php
+                                foreach ($imagenes as $imagen ) { ?>
+                                    <li>
+                                        <img data-src="<?php echo UPLOADSURL.'/'.$imagen; ?>">
+                                    </li>
+                                
+                            <?php } //foreach
+                                ?>
+                                </ul>    
 
-                        <?php } else {
+                            <?php } else {
 
-                            //por las dudas de q la galería este activada pero no haya imagenes dentro
-                            ?>
-                            <figure>
-                                <img data-src="<?php echo UPLOADSURL.'/'.$data[$i]['post_imagen']; ?>">
-                            </figure>
+                                //por las dudas de q la galería este activada pero no haya imagenes dentro
+                                ?>
+                            <div class="salon-galeria" data-galeria-activate="false">
+                                <figure>
+                                    <img data-src="<?php echo UPLOADSURL.'/'.$data[$i]['post_imagen']; ?>">
+                                </figure>
 
-                        <?php } ?>
-                    
-                    <?php  endif; ?>
+                            <?php } ?>
+                        
+                        <?php  endif; ?>
+                    </div>
                 </div>
             </div>
             </article>

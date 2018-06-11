@@ -131,20 +131,6 @@ $(document).ready(function(){
     /*
     * pagination
     */
-   /*var pages = $('.page-click-btn');
-    //variable para saber cuantas paginas son
-    var numberPages = pages.length;
-    //la cantidad de paginas que puede mostrar el diseño
-    var pageHtml = 8;
-    //sabe que cantidad de paginas están fuera de la vista
-    outViewPages = numberPages-pageHtml;
-    //contenedor de las paginas
-    contenedor = $('.posts-content');
-    //cantidad de numeros por paginas
-    postPerPage = $('.pagination-items').attr('data-post-per-page');
-    //categoria cargada
-    categoria = $('.main-title-page').attr('data-categoria');
-    */
 
     //clic en los numeros de paginas
     $(document).on('click', '.page-click-btn', function( event ){
@@ -169,7 +155,7 @@ $(document).ready(function(){
             beforeSend: function() {
             },
             success: function ( response ) {
-                console.log(response)
+                //console.log(response)
                 var newPage = $( '<div id="page'+page+'" class="pages-salones">' + response + '</div>' );
                 contenedor.append(newPage);
             },
@@ -187,6 +173,87 @@ $(document).ready(function(){
         $(this).addClass('active');
         
     });//.click .page.click-btn
+
+
+    /*
+     * SALONES TOGGLE
+    */
+    var galeriasActivas = 0;
+    $(document).on('click', '.salones li', function (){
+        var popup = $('.salones-popup');
+        var dataContenedor = $(this).find('.salon-more-info-data');
+
+        //se cierra el popup para vaciarlotodos los demás si es que hay alguna abierto
+        $(popup).animate({
+            'height': 0,
+        }, 500, function() {
+            $(popup).empty();
+            //agrego boton para cerrar
+            $(popup).append( $('<span class="close-data-salon"></span>') );
+            //agrego la data a mostrar que la clono de cada articulo
+            var newData = $( dataContenedor.clone() );
+            $(popup).append( newData );
+            var dataGaleria = $(newData).find('.salon-galeria');
+            var galeriaActivated = $(dataGaleria).attr('data-galeria-activate');
+            var itemsGaleria = $(newData).find('.slider-salones');
+            
+            /*
+            * CARGA DE IMAGENES
+            */
+            //1. busca que hay que carar
+            var imagenes = $(dataGaleria).find('img');
+            
+            imagenes.each(function(){
+
+                if ( ! $(this).attr('src') ) {
+                    $(this).attr('src', $(this).attr('data-src') );
+                } 
+
+            });//load images
+            
+            /*
+            * ACTIVAR EL SLIDER SI ES NECESARIO
+            */
+            //si tiene galería de fotos hay que activar el owl slider
+            if ( galeriaActivated ) {
+                //chequeamos si ya no está activada
+                if ( ! $(itemsGaleria).hasClass('owl-loaded') ) {
+                    
+                    galeriasActivas++;
+                    $(itemsGaleria).attr('id', 'salon-galeria-'+galeriasActivas)
+                    owlCarouselStart ('#salon-galeria-'+galeriasActivas);
+
+                }
+            }
+            if (innerWidth < 992 ) {
+                var h1 = $(popup).find('.salon-contenido').prop('scrollHeight');
+                var h2 = $(popup).find('.salon-galeria').prop('scrollHeight');
+
+                var h = h1+h2;
+             } else {
+                var h = $(popup).find('.salon-galeria').prop('scrollHeight');
+            }
+
+            $(popup).animate({
+                'height': h + 'px',
+            }, 500);
+           
+            if (innerWidth < 992 ) {
+                scrollToID('#salonespopup');
+            } else {
+                $('html, body').stop().animate({
+                    scrollTop: $('#salonespopup').offset().top -150
+                }, 'slow');
+            }
+            
+        });   
+    });//click salones li
+
+    $(document).on('click', '.close-data-salon', function (){
+        $('.salones-popup').animate({
+            'height': 0,
+        }, 500);
+    });//click close data salon
 
 
 });//.ready()
@@ -244,6 +311,12 @@ $( window ).on('load', function(){
                         $(templateRef).hide();
                         //y se agrega la respuesta
                         $(wrapper).append(response);
+                        $(wrapper).animate({
+                            'height': $(wrapper).prop('scrollHeight') + 'px',
+                        }, 500, function(){
+                            //se quita el overflow, porque ahora ya no es necesario y sino se va a ver mal todo lo demás
+                            $(wrapper).css('overflow', 'visible');
+                        });
                     });
                }
             },

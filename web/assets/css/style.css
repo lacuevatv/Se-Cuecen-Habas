@@ -1172,7 +1172,7 @@ html, body {
         height: 688px; } }
     .wrapper-slider .sliders li h2 {
       text-align: center;
-      font-weight: 700;
+      font-weight: 600;
       font-size: 200%;
       line-height: 150%;
       margin-bottom: 20px;
@@ -1608,8 +1608,13 @@ html, body {
 /*
  * SALONES
 */
+#salones {
+  position: relative; }
+
 .salones-wrapper {
-  background-color: #f4f4f4; }
+  background-color: #f8f8f8;
+  height: 0;
+  overflow: hidden; }
   .salones-wrapper .loading-salones {
     display: block;
     text-align: center;
@@ -1620,7 +1625,6 @@ html, body {
     .salones-wrapper .loading-salones > span {
       animation: blinking 500ms infinite; }
   .salones-wrapper .salones {
-    overflow: hidden;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -1651,6 +1655,7 @@ html, body {
       -ms-transition: all 0.5s;
       transition: all 0.5s; }
     .salones-wrapper .salones li {
+      position: relative;
       cursor: pointer;
       width: 50%;
       -webkit-transition: all 0.5s;
@@ -1749,7 +1754,7 @@ html, body {
         @media (min-width: 767px) {
           .salones-wrapper .salon .data-wrapper h5 {
             font-size: 100%; } }
-    .salones-wrapper .salon .salon-more-info-data {
+    .salones-wrapper .salon .extra-data {
       display: none; }
   .salones-wrapper .wrapper-pagination {
     padding: 20px; }
@@ -1781,7 +1786,109 @@ html, body {
         .salones-wrapper .wrapper-pagination .pagination li:last-child:after {
           content: none; }
       .salones-wrapper .wrapper-pagination .pagination .active {
-        font-weight: 700; }
+        font-weight: 600; }
+
+.salones-popup {
+  position: relative;
+  overflow: hidden;
+  height: 0; }
+  .salones-popup .salon-more-info-data {
+    height: 100%; }
+  .salones-popup .close-data-salon {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    display: block;
+    height: 20px;
+    width: 20px;
+    background: url("../images/sprite.png") no-repeat;
+    background-size: 150px 60px;
+    background-position: -117px -42px;
+    cursor: pointer;
+    z-index: 11111; }
+    .salones-popup .close-data-salon:hover {
+      zoom: 1;
+      filter: alpha(opacity=50);
+      opacity: 0.5; }
+    @media (min-width: 1500px) {
+      .salones-popup .close-data-salon {
+        top: 100px;
+        left: 30px; } }
+
+.salon-more-info-data {
+  padding-top: 20px;
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  background: #f8f8f8;
+  z-index: 11; }
+  @media (min-width: 992px) {
+    .salon-more-info-data {
+      -webkit-flex-direction: row;
+      -moz-flex-direction: row;
+      -ms-flex-direction: row;
+      -o-flex-direction: row;
+      flex-direction: row; } }
+  .salon-more-info-data .salon-contenido {
+    padding: 20px 25px 20px 60px;
+    width: 100%; }
+    @media (min-width: 992px) {
+      .salon-more-info-data .salon-contenido {
+        width: 30%;
+        font-size: 90%; } }
+    @media (min-width: 1500px) {
+      .salon-more-info-data .salon-contenido {
+        padding-top: 80px;
+        padding-left: 80px; } }
+    .salon-more-info-data .salon-contenido h1 {
+      font-size: 170%;
+      font-weight: 600;
+      margin-bottom: 30px; }
+    .salon-more-info-data .salon-contenido h2 {
+      margin-bottom: 5px;
+      font-family: "Flama", sans-serif;
+      text-transform: uppercase; }
+    .salon-more-info-data .salon-contenido p {
+      margin-bottom: 15px; }
+    .salon-more-info-data .salon-contenido strong {
+      font-weight: 600; }
+    .salon-more-info-data .salon-contenido em {
+      font-style: italic; }
+    .salon-more-info-data .salon-contenido li {
+      list-style: circle; }
+  .salon-more-info-data .salon-galeria {
+    width: 100%;
+    height: 100%; }
+    @media (min-width: 992px) {
+      .salon-more-info-data .salon-galeria {
+        width: 70%; } }
+    .salon-more-info-data .salon-galeria figure {
+      height: 100%;
+      width: 100%; }
+    .salon-more-info-data .salon-galeria img {
+      width: 100%; }
+  .salon-more-info-data .slider-salones {
+    width: 100%; }
+    .salon-more-info-data .slider-salones li {
+      width: 100%; }
+    .salon-more-info-data .slider-salones .owl-prev {
+      left: 2%; }
+    .salon-more-info-data .slider-salones .owl-next {
+      right: 2%; }
 
 /*
  * CLIENTES
@@ -1837,9 +1944,9 @@ html, body {
           font-size: 170%; } }
       .recomendaciones-wrapper .comentarios li em {
         font-style: italic;
-        font-weight: 700; }
+        font-weight: 600; }
       .recomendaciones-wrapper .comentarios li strong {
-        font-weight: 700; }
+        font-weight: 600; }
       .recomendaciones-wrapper .comentarios li .name {
         font-size: 50%;
         margin: 30px 0 10px;
