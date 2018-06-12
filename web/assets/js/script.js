@@ -230,8 +230,16 @@ $(document).ready(function(){
                 var h2 = $(popup).find('.salon-galeria').prop('scrollHeight');
 
                 var h = h1+h2;
+                //si es menor a 200 la altura se coloca un mínimo para que no se vea mal
+                if ( h < 200 ) {
+                    h = 800;
+                }
              } else {
                 var h = $(popup).find('.salon-galeria').prop('scrollHeight');
+                //si es menor a 200 la altura se coloca un mínimo para que no se vea mal
+                if ( h < 200 ) {
+                    h = 650;
+                }
             }
 
             $(popup).animate({
