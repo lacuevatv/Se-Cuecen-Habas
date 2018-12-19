@@ -823,11 +823,7 @@ $(window).on('load', function(){
 
     })(); 
 
-    
-
-});//on load
-
-function owlCarouselStart (item) {
+    //clientes slider (ese es mas sencillo)
     $(item).owlCarousel({
         loop:true,
         margin:10,
@@ -837,6 +833,34 @@ function owlCarouselStart (item) {
         responsive:{
             0:{
                 items:1
+            },
+        }
+    });
+
+});//on load
+
+function owlCarouselStart (item) {
+    $('#clientesSlider').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:false,
+        doots: false,
+        lazyLoad: true,
+        autoplay:true,
+        autoplayTimeout:4000,
+        //navText : ['<span class="icon-arrow icon-arrow-left"></span>','<span class="icon-arrow icon-arrow-right"></span>'],
+        responsive:{
+            0:{
+                items:1
+            },
+            576:{
+                items:2
+            },
+            768:{
+                items:3
+            },
+            992:{
+                items:4
             },
         }
     }); 
